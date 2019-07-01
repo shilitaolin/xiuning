@@ -15,25 +15,6 @@
 .text,p,#contain{
 	font-family:楷体;
 }
-.loading {
-	position:fixed;
-    width:100%;
-    height:70%;
-	background-color:#797979;
-	background-color:rgba(0,0,0,0.2);
-}
-#loadTip{
-	vertical-align:middle;
-	text-align:center;
-	position:absolute;
-	width:100%;
-}
-#btn_lb{
-	width:50px;
-	height:50px;
-	position:absolute;
-	top:725px;
-}
 #tgqj{
 	position:absolute;
 	left:840px;
@@ -44,17 +25,15 @@ div div{
 }
 #contain{
 	position:absolute;
-	margin-left:50%;
 	width:600px;
-	left:-450px;
-	top: 30px;
+	left:30px;
+	top: 280px;
 }
 #pic{
 	height:120px;
 	display:none;
 }
 #talk{
-	margin:0 auto;
 	width:700px;
 	height:150px;
 	background-color:rgba(0,0,0,0.5);
@@ -81,7 +60,6 @@ div div{
 	top: 40px;
 }
 </style>
-<script src="js/sound.js"></script>
 <script>
 var i = 1;
 $(document).ready(function() {
@@ -96,11 +74,11 @@ $(document).ready(function() {
 		else if(i==3){
 		$("p").text("你可以点击不同的标题来了解他。注意：游园玩乐小游戏需要对休宁有了一定了解才能玩哦。");i++;}
 		else if(i==4){
-			window.location.href='mulu.html?sound='+sound;
+			window.location.href='mulu.html?';
 		}
 	});
 	$("#tgqj").click(function(){
-		window.location.href='mulu.html?sound='+sound;
+		window.location.href='mulu.html?';
 	});
 });
 </script>
@@ -121,13 +99,5 @@ $(document).ready(function() {
 	<img src="images/guidebg.jpg" width="1000px" height="620px">
 </div>
 <script src="js/wh.js"></script>
-<script type="text/javascript">
-//按钮高度
-document.getElementById("contain").style.marginTop= (window.winHeight - 365) +"px";
-//lb
-document.getElementById("btn_lb").style.left=winWidth-50-80+"px";
-//fhml,tgqj
-document.getElementById("tgqj").style.left=winWidth-150-30+"px";
-</script>
 </body>
 </html>
