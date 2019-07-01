@@ -1,0 +1,92 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>首页</title>
+<style type="text/css">
+
+/*花瓣*/
+	body{
+    /*max-width:100%;*/
+    box-sizing: border-box;
+}
+#yinghua{
+    width:50px;
+    height:50px;
+    margin-top:-5%;
+    opacity: 0.8;
+    position: absolute;
+    z-index: 99;
+    /*-webkit-transform:rotate3d(.6,1,.6,45deg);*/
+    /*-moz-transform:rotate3d(.6,1,.6,45deg);*/
+    /*-ms-transform:rotate3d(.6,1,.6,45deg);*/
+    /*-o-transform:rotate3d(.6,1,.6,45deg);*/
+    /*transform:rotate3d(.6,1,.6,45deg);*/
+
+}
+/*花瓣*/
+.a1 {
+  position: relative;
+  width: 1000px;
+  height:620px;
+  margin: 0 auto;
+  
+}
+    .a2 {
+		position: absolute;
+        left:550px;
+		top: 380px;
+		margin-left: -120px;
+    }
+    .m {
+		position: absolute;
+        left:550px;
+		top: 330px;
+		margin-left: -120px;
+        opacity: 0;
+        transition: all 1s;
+	}
+    .content:hover .m {
+        opacity: 0.5;
+    }
+
+</style>
+<script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+<script src="js/yinghua.js"></script>
+	</head>
+	
+<body>
+
+
+<!--花瓣-->
+<div class="cherry">
+<img id="yinghua" src="images/yinghua.png" alt="" >
+</div>
+<script>
+    $(function(){
+        $('.cherry').Cherry_Blossoms({
+            is_Cherry:true,//是否生成樱花
+            image_min:10,//花瓣最小宽度和高度
+            image_max:50,//花瓣最大宽度和高度
+            time_min:5000,//花瓣最快下坠时间
+            time_max:20000,//花瓣最慢下坠时间
+            interval:800//花瓣生成时间间隔
+        })
+    })
+</script>
+<!--花瓣-->
+<div class="a1">
+
+
+<img src="images/page.jpg" width="1000px" height="620px">
+ <div class="content">
+        <div class="a2">
+            <a href="guide.html"><img src="images/into.png"  width="150px"></a>
+        </div>
+        <div class="m">
+            <a href="guide.html"><img src="images/moshui.png"  width="150px"></a>
+        </div>
+    </div>
+	</div>
+</body>
+</html>

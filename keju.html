@@ -1,0 +1,185 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="UTF-8">
+  <title>科举</title>
+  <style>
+	a img{border:0;}
+a img:hover{border:0;}
+body{
+	margin: 0 ;
+}
+#box{
+	height: 620px;
+	width: 1000px;
+	margin: 0 auto;
+	position: relative;
+}
+#bj{
+	position:absolute;
+	z-index:-999;
+	margin:0 auto;
+	width:1000px;
+	height:620px;
+}
+	
+.show { 
+	position:absolute;
+	width:1000px; 
+	cursor:pointer;
+	margin-top:170px;
+	margin-left:50px;
+} 
+.show.topBottom {
+	width: 1000px;
+}
+.canvas{ 
+	position:absolute; 
+	left:0px; 
+	top:0px; 
+	z-index:-1;
+}
+.backcanvas{ 
+	position:absolute; 
+	left:0px; 
+	top:0px; 
+	z-index:-2;
+}
+.showtop, .showbottom {
+	float: left;
+}
+.showtop {
+	margin-top: 20px; 
+}
+.showbottom {
+	margin-top: 120px;
+	margin-bottom: 20px; 
+}
+.show .showitem{
+	width:140px; 
+	height:70px; 
+	display:block; 
+	margin:10px;
+}
+.show.topBottom .showitem {
+	float: left; 
+	margin:5px; 
+}
+
+#fh {
+	position:absolute;
+	top:500px;
+	left:890px;
+	
+	}
+#fh a img:hover{
+	  transform:scale(1.1);
+
+	}
+.resetCanvasBtn img{
+	position:absolute;
+	top:510px;
+	left:620px;
+	
+	}
+.resetCanvasBtn img:hover{
+	  transform:scale(1.1);
+
+	}
+
+.goBackBtn img{
+	position:absolute;
+	top:510px;
+	left:150px;
+	
+	}
+.savePair img{
+	position:absolute;
+	top:510px;
+	left:390px;
+	
+	}
+	
+	
+	
+	</style>
+  <script src="http://libs.baidu.com/jquery/1.8.2/jquery.min.js"></script>
+  <script src="js/onLine.js"></script>
+  <script type="text/javascript">
+  $(function(){	
+		var obj = $(".demo");
+		var size = obj.size();
+		for(var i=0; i<size; i++ ){
+			obj.eq(i).onLine({
+				regainCanvas: true
+			});
+		}
+  });
+  </script>
+</head>
+<body> 
+
+    <div id="box">
+ <img src="images/text.jpg" id="bj">
+    <div id="test2" data-pair=5 class="demo pt10">	
+    
+        <div class="show topBottom cb">
+			
+            <div class="showtop"><!--左侧-->
+            	<span class="showitem" data-id="L1">          
+                <img src="images/kj1.png" id="bs11" name="sure11"  width="80px" height="40px">
+                </span>
+                <span class="showitem" data-id="L2">
+                <img src="images/kj3.png" id="bs22" name="sure22"  width="100px" height="40px">
+				</span>
+                <span class="showitem" data-id="L3">
+                <img src="images/kj4.png" id="bs33" name="sure33"  width="100px" height="40px">
+				</span>
+                <span class="showitem" data-id="L4">
+                <img src="images/kj5.png" id="bs44" name="sure44"  width="100px" height="40px">
+				</span>
+                <span class="showitem" data-id="L5">
+                <img src="images/kj6.png" id="bs55" name="sure55"  width="100px" height="40px">
+                </span>
+                <span class="showitem" data-id="L6">
+                <img src="images/kj7.png" id="bs66" name="sure66"  width="80px" height="40px">
+                </span>
+            </div>
+            <div class="showbottom">
+                <span class="showitem" data-id="R1">
+                <img src="images/kj12.png" id="by11" name="sure1"  width="120px" height="40px">
+                </span>
+                <span class="showitem" data-id="R2">
+                <img src="images/kj10.png" id="by22" name="sure2"  width="120px" height="40px">
+                </span>
+                <span class="showitem" data-id="R3">
+                <img src="images/kj9.png" id="by33" name="sure3"  width="150px" height="40px">
+                </span>
+                <span class="showitem" data-id="R4">
+				<img src="images/kj11.png" id="by44" name="sure4"  width="140px" height="40px">
+				</span>
+                <span class="showitem" data-id="R5">
+                <img src="images/kj2.png" id="by55" name="sure5"  width="150px" height="40px">
+                </span>
+                <span class="showitem" data-id="R6">
+                <img src="images/kj8.png" id="by66" name="sure6"  width="140px" height="40px">
+                </span>      	
+            </div>
+			
+            <canvas class="canvas"></canvas>
+            <canvas class="backcanvas"></canvas>
+        </div>  
+        <!--返回-->
+        <div class="savePair"><img src="images/kj14.png" width="130px" height="35px" title="查看答案"></div>
+        <div class="goBackBtn"><img src="images/kj16.png" width="130px" height="35px" title="回退一步"></div>                
+		<div class="resetCanvasBtn"><img src="images/kj15.png" width="130px" height="35px" title="重玩"></div>	
+        <div id="fh">
+        <a href="renwen.html"><img src="images/return.png" width="60px" height="85px" title="返回"></a>
+        </div>  
+        <!--返回-->      
+        
+
+    </div>     
+    </div> 
+</body>
+</html>
