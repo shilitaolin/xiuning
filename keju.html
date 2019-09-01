@@ -24,15 +24,14 @@ body{
 }
 	
 .show { 
+	background-color:rgba(0,0,0,0.10);
 	position:absolute;
-	width:1000px; 
+	top: 20px;
+	width:900px; 
 	cursor:pointer;
 	margin-top:170px;
 	margin-left:50px;
 } 
-.show.topBottom {
-	width: 1000px;
-}
 .canvas{ 
 	position:absolute; 
 	left:0px; 
@@ -49,17 +48,18 @@ body{
 	float: left;
 }
 .showtop {
-	margin-top: 20px; 
+	text-align: center;
+	margin-top: 0px; 
 }
 .showbottom {
-	margin-top: 120px;
-	margin-bottom: 20px; 
+	text-align: center;
+	margin-top: 90px;
+	margin-left: 0px;
 }
 .show .showitem{
 	width:140px; 
-	height:70px; 
-	display:block; 
-	margin:10px;
+	height:60px; 
+	display:block;
 }
 .show.topBottom .showitem {
 	float: left; 
@@ -68,40 +68,95 @@ body{
 
 #fh {
 	position:absolute;
-	top:500px;
-	left:890px;
+	top:450px;
+	left:860px;
 	
 	}
-#fh a img:hover{
-	  transform:scale(1.1);
-
-	}
-.resetCanvasBtn img{
+.resetCanvasBtn{
 	position:absolute;
-	top:510px;
-	left:620px;
-	
+	top:460px;
+	left:450px;text-align: center;
+	width: 130px;
+	background-color:rgba(0,0,0,0.10);
 	}
-.resetCanvasBtn img:hover{
-	  transform:scale(1.1);
-
-	}
-
-.goBackBtn img{
+	  P {font-family: 楷体;font-size: 22px;}
+.goBackBtn{
 	position:absolute;
-	top:510px;
-	left:150px;
-	
+	top:460px;
+	left:150px;text-align: center;
+	width: 130px;
+	background-color:rgba(0,0,0,0.10);
 	}
-.savePair img{
+.savePair{
 	position:absolute;
-	top:510px;
-	left:390px;
-	
+	top:460px;
+	left:300px;
+	text-align: center;
+	width: 130px;
+	background-color:rgba(0,0,0,0.10);
 	}
-	
-	
-	
+	  #top{position: absolute;top: 5px;left: 280px;}	
+	  #top1{position: absolute; font-family: 楷体;top: 120px;left: 40px;font-size: 22px;padding:0px 35px;
+	background-color:rgba(249,249,249,0.80);
+	font-family:楷体;
+	font-size: 19px;
+	line-height: 40px;
+	position: absolute;
+	width: 850px;
+	height: 430px;
+	border-style:solid;
+    border-width:3px;
+	border-color:rgba(0,0,0,0.5);z-index: -10;}
+/*导航栏*/
+#dh
+{
+	position:absolute;
+	left:20px;
+	top:20px;
+	}
+	#dh{
+    transition:All 0.4s ease-in-out;
+}
+#dh:hover{
+    transform:rotate(45deg) scale(1);
+    cursor: cell;
+}
+#dh1:hover,#dh2:hover,#dh3:hover,#dh4:hover,#dh5:hover,#dh6:hover{
+	transform:scale(1.1);
+	}
+.dhl{
+	position:absolute;
+	left:0px;
+	top:0px;
+	height:200px;
+	z-index:999;
+	}
+.dhl ul {
+	list-style-type: none;
+	margin: 0px;
+	padding: 0px;
+}
+.dhl ul li a {
+	text-decoration:none;
+	display: block;
+	text-align: center;
+}
+.dhl ul li ul{
+	display:none;	
+}
+.dhl ul li:hover ul{
+	display:block;
+	position:absolute;
+	left:0px;
+	top:100px;/*选项高度*/
+}.e{animation: ee 1s 1;}@keyframes ee{0%{opacity: 0;}100%{opacity: 1;}}
+#dh1{position:absolute;top:-15px;left:15px;width:73px;height:64px;}	
+#dh2{position:absolute;top:50px;left:15px;width:74px;height:64px;}	
+#dh3{position:absolute;top:118px;left:15px;width:78px;height:60px;}	
+#dh4{position:absolute;top:180px;left:15px;width:78px;height:60px;}	
+#dh5{position:absolute;top:240px;left:10px;width:94px;height:65px;}	
+#dh6{position:absolute;top:290px;left:10px;width:93px;height:75px;}
+/*导航栏*/
 	</style>
   <script src="jquery/jquery-1.8.2.min.js"></script>
   <script src="js/onLine.js"></script>
@@ -118,51 +173,49 @@ body{
   </script>
 </head>
 <body> 
-
-    <div id="box">
- <img src="images/text.jpg" id="bj">
+    <div id="box"><div id="top"><img src="images/rw4.png" width="400px"></div>
+		<div id="top1"><p>如果你已经对休宁的历史有所了解，那就把他们匹配上吧。</p></div>
+ <img src="images/rw1.jpg" id="bj">
     <div id="test2" data-pair=5 class="demo pt10">	
-    
         <div class="show topBottom cb">
-			
             <div class="showtop"><!--左侧-->
             	<span class="showitem" data-id="L1">          
-                <img src="images/kj1.png" id="bs11" name="sure11"  width="80px" height="40px">
+                <p>戴震</p>
                 </span>
                 <span class="showitem" data-id="L2">
-                <img src="images/kj3.png" id="bs22" name="sure22"  width="100px" height="40px">
+                <p>程大昌</p>
 				</span>
                 <span class="showitem" data-id="L3">
-                <img src="images/kj4.png" id="bs33" name="sure33"  width="100px" height="40px">
+                <p>黄永强</p>
 				</span>
                 <span class="showitem" data-id="L4">
-                <img src="images/kj5.png" id="bs44" name="sure44"  width="100px" height="40px">
+                <p>汪根印</p>
 				</span>
                 <span class="showitem" data-id="L5">
-                <img src="images/kj6.png" id="bs55" name="sure55"  width="100px" height="40px">
+                <p>程敏政</p>
                 </span>
                 <span class="showitem" data-id="L6">
-                <img src="images/kj7.png" id="bs66" name="sure66"  width="80px" height="40px">
+                <P>朱升</P>
                 </span>
             </div>
             <div class="showbottom">
                 <span class="showitem" data-id="R1">
-                <img src="images/kj12.png" id="by11" name="sure1"  width="120px" height="40px">
+                <P>《诗论》</P>
                 </span>
                 <span class="showitem" data-id="R2">
-                <img src="images/kj10.png" id="by22" name="sure2"  width="120px" height="40px">
+                <p>《青漪》</p>
                 </span>
                 <span class="showitem" data-id="R3">
-                <img src="images/kj9.png" id="by33" name="sure3"  width="150px" height="40px">
+                <p>《心路追梦》</p>
                 </span>
                 <span class="showitem" data-id="R4">
-				<img src="images/kj11.png" id="by44" name="sure4"  width="140px" height="40px">
+				<p>《枫林集》</p>
 				</span>
                 <span class="showitem" data-id="R5">
-                <img src="images/kj2.png" id="by55" name="sure5"  width="150px" height="40px">
+                <p>《四库全书》</p>
                 </span>
                 <span class="showitem" data-id="R6">
-                <img src="images/kj8.png" id="by66" name="sure6"  width="140px" height="40px">
+                <p>《明文衡》</p>
                 </span>      	
             </div>
 			
@@ -170,16 +223,34 @@ body{
             <canvas class="backcanvas"></canvas>
         </div>  
         <!--返回-->
-        <div class="savePair"><img src="images/kj14.png" width="130px" height="35px" title="查看答案"></div>
-        <div class="goBackBtn"><img src="images/kj16.png" width="130px" height="35px" title="回退一步"></div>                
-		<div class="resetCanvasBtn"><img src="images/kj15.png" width="130px" height="35px" title="重玩"></div>	
+        <div class="savePair"><p>查看答案</p></div>
+        <div class="goBackBtn"><p>回退一步</p></div>                
+		<div class="resetCanvasBtn"><p>重新连线</p></div>	
         <div id="fh">
-        <a href="renwen.html"><img src="images/return.png" width="60px" height="85px" title="返回"></a>
+        <a href="renwen0.html"><img src="images/return.png" width="60px" height="85px" title="返回"></a>
         </div>  
         <!--返回-->      
         
 
     </div>     
-    </div> 
+   <!--导航栏-->
+<div class="pp">
+<div class="dhl">
+<ul>
+<li>
+<a href="#"><img src="images/guide.png" id="dh" width="60px" height="60px" title="导航"></a>
+<ul>
+<li><div class="e"><a href="index.html"><img src="images/dh1.png" id="dh1"></a></div></li>
+<li><div class="e"><a href="shanshui.html"><img src="images/dh2.png" id="dh2"></a></div></li>
+<li><div class="e"><a href="jianzhu.html"><img src="images/dh3.png" id="dh3"></a></div></li>
+<li><div class="e"><a href="renwen.html"><img src="images/dh4.png" id="dh4"></a></div></li>
+<li><div class="e"><a href="game.html"><img src="images/dh6.png" id="dh5"></a></div></li>
+<li><div class="e"><a href="techan.html"><img src="images/dh5.png" id="dh6"></a></div></li>
+</ul>
+</li>
+</ul>
+</div>
+</div>
+<!--导航栏--> </div> 
 </body>
 </html>

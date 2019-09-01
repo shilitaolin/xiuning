@@ -11,21 +11,58 @@
   margin: 0 auto;
   
 }
-.hp{
+.t1{
 	position:absolute;
-	top:160px;
-	left:230px;
+	top:170px;
+	left:140px;
 }
-.bw{
+.t1,.t2,.t3{
+    transition:All 1s ease;
+}
+	/*.t3 img:hover{transform:scale(1.05);}	*/
+	
+.c1:hover .t1{
+    transform:rotate(0deg) scale(1.1);
+    cursor: cell;
+}.c2:hover .t2{
+    transform:rotate(0deg) scale(1.1);
+    cursor: cell;
+}.c3:hover .t3{
+    transform:rotate(0deg) scale(1.1);
+	cursor: cell;}
+
+.t2{
 	position:absolute;
-	top:345px;
-	left:240px;
+	top:170px;
+	left:380px;
+	}
+.t3{
+	position:absolute;
+	top:170px;
+	left:620px;
 	}
 .return{
 		position: absolute;
 		top:460px;
 		left:900px;
 	}
+
+    .m1 {
+		position: absolute;
+        left:175px;
+		top: 330px;
+	}
+	 .m2 {
+		position: absolute;
+        left:385px;
+		top: 330px;
+	}
+	 .m3 {
+		position: absolute;
+        left:650px;
+		top: 330px;
+	}
+	
 </style>
 
 </head>
@@ -33,10 +70,25 @@
 <body>
 <div class="a1">
 <img src="images/build.jpg" width="1000px" height="620px">
-<div class="hp">
-	<a href="huipai.html"><img src="images/build3.png"  width="485px"></a></div>
-<div class="bw">
-	<a href="bowuguan.html"><img src="images/build4.png"  width="410px"></a></div>
+<div class="c1">
+	<div class="t1">
+	<a href="jz1.html"><img src="images/jz3-1.png"  width="180px"></a></div>
+	<div class="m1">
+     <a href="jz1.html"><img src="images/jz3-2.png" width="123" ></a>
+        </div></div>
+<div class="c2">
+<div class="t2">
+	<a href="jz2.html"><img src="images/jz2-1.png"  width="180px"></a></div>
+	<div class="m2">
+     <a href="jz2.html"><img src="images/jz2-2.png" ></a>
+        </div>
+	</div>
+<div class="c3">
+<div class="t3">
+	<a href="jz3.html"><img src="images/jz1-11.png"  width="180px"></a></div>
+	<div class="m3">
+     <a href="jz3.html"><img src="images/jz1-12.png"  ></a>
+        </div></div>
 <div class="return">
 <a href="mulu.html"><img src="images/return.png"  width="60px"></a></div>
 </div>

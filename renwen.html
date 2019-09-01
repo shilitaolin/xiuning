@@ -7,7 +7,7 @@
 .a1 {
   position: relative;
   width: 1000px;
-  height:600px;
+  height:620px;
   margin: 0 auto;
   
 }
@@ -76,13 +76,169 @@
 		top:470px;
 		left:900px;
 	}
-</style>
 
+.text,p,#contain,#talk,i{
+	font-family:楷体;
+}
+
+#talk{
+	position: absolute;
+	top: 297px;
+	left: 190px;
+	width:600px;
+	height:190px;
+	background-color:rgba(80,80,80,0.70);
+	padding:10px 35px;
+	font-size: 24px;
+	font-weight: bold;
+	line-height: 36px;
+	color: #FFF;
+	display:none;
+}
+	#t2,#t3{display: none;}
+	#t4{position: absolute;
+	top: 300px;
+	left: 210px;
+	width:600px;
+	height:210px;
+	font-size: 20px;
+	line-height: 36px;
+		color: #FFF;display: none;}
+#next{
+	color: #FFF;
+	font-size: 24px;
+	position:absolute;
+	left:640px;
+	top:420px;
+}
+#tg{
+	color: #FFF;
+	font-size: 24px;
+	position:absolute;
+	left:500px;
+	top:420px;
+}
+
+#dz img{
+	width:300px;
+	height:auto;
+	position: absolute;
+	left: 690px;
+	top: 325px;
+	z-index: 98;
+}
+	#dz1{
+		position: absolute;
+		top: 470px;
+		left: 460px;
+		z-index: 20;
+	}
+	#a2{display: none;}
+	#a3{position: absolute;top: 80px;left: -70px; width: 800px;}
+/*导航栏*/
+#dh
+{
+	position:absolute;
+	left:20px;
+	top:20px;
+	}
+	#dh{
+    transition:All 0.4s ease-in-out;
+}
+#dh:hover{
+    transform:rotate(45deg) scale(1);
+    cursor: cell;
+}
+#dh1:hover,#dh2:hover,#dh3:hover,#dh4:hover,#dh5:hover,#dh6:hover{
+	transform:scale(1.1);
+	}
+.dhl{
+	position:absolute;
+	left:50px;
+	top:25px;
+	height:200px;
+	z-index:999;
+	}
+.dhl ul {
+	list-style-type: none;
+	margin: 0px;
+	padding: 0px;
+}
+.dhl ul li a {
+	text-decoration:none;
+	display: block;
+	text-align: center;
+}
+.dhl ul li ul{
+	display:none;	
+}
+.dhl ul li:hover ul{
+	display:block;
+	position:absolute;
+	left:0px;
+	top:100px;/*选项高度*/
+}.e{animation: ee 1s 1;}@keyframes ee{0%{opacity: 0;}100%{opacity: 1;}}
+#dh1{position:absolute;top:-15px;left:15px;width:73px;height:64px;}	
+#dh2{position:absolute;top:50px;left:15px;width:74px;height:64px;}	
+#dh3{position:absolute;top:118px;left:15px;width:78px;height:60px;}	
+#dh4{position:absolute;top:180px;left:15px;width:78px;height:60px;}	
+#dh5{position:absolute;top:240px;left:10px;width:94px;height:65px;}	
+#dh6{position:absolute;top:290px;left:10px;width:93px;height:75px;}
+/*导航栏*/
+</style>
+<script src="jquery/jquery-3.2.1.min.js"> </script>
+<script>
+var i = 1;
+$(document).ready(function() {
+
+	$("#talk").fadeIn();
+	$("#dz").fadeIn();
+    $("#next").click(function(){
+		if(i==1){
+		$("#t1").css("display","none");
+		$("#t2").fadeIn();
+		$("#ss,#rw,#mj,#fs,#yy").fadeIn(6000);
+			i++;
+		}else if(i==2){
+		$("#t2").css("display","none");
+		$("#t3").fadeIn();	
+			i++;
+		}
+		else if(i==3){
+			$("#a2").fadeIn();	
+			$("#a3,#dz").css("display","none");
+		}
+	});
+	
+	
+	$("#tg").click(function(){
+		$("#a2").fadeIn();
+			$("#a3,#dz").css("display","none");
+	});
+	
+//改成点击出现导游信息	
+//	$("#dz1").click(function(){
+//		$("#dz3").fadeToggle();
+//  	});
+
+
+});
+</script>
 </head>
 
 <body>
 <div class="a1">
-<img src="images/culture.jpg" width="1000px" height="600px">
+<img src="images/culture.jpg" width="1000px" height="620px">
+	<div id="dz"><img src="images/daizhen.png"></div><div id="a3">
+	<div id="dz1"><img src="images/dz1.png" height="35px"></div>
+        <div id="talk">
+        <div id="t1"><p>&nbsp;&nbsp;人文荟萃的意思是指，一个地方的人才和文物众多,并聚集在一地。</p></div>
+		<div id="t2"><p>&nbsp;&nbsp;	在我看来，休宁作为中国第一状元县、徽文化的传承地，正是一个这样人文荟萃的地方。</p></div>
+		<div id="t3"><p>接下来就带你从古至今了解一下这些人才和文化吧。</p></div></div>
+<div id="t4"><p>注：科举是一个连线小游戏。</p></div>
+<div id="next"><i>点击继续</i></div>
+<div id="tg"><i>跳过引导</i></div></div>
+	<div id="a2">
 <div class="c1">
 <div class="zg">
 	<a href="zhengu.html"><img src="images/zhengu.png"  width="150px"></a></div>
@@ -108,10 +264,28 @@
 <div class="kj">
 <a href="keju.html"><img src="images/keju.png"  width="150px"></a></div>
 		<div class="m4">
-            <a href="keju.html"><img src="images/moshui.png"  width="200px"></a>
-        </div></div>
+            <a href="keju.html"><img src="images/moshui.png"  width="200px"></a></div></div>
+		</div>
 <div class="return">
 <a href="mulu.html"><img src="images/return.png"  width="60px"></a></div>
+<!--导航栏-->
+<div class="pp">
+<div class="dhl">
+<ul>
+<li>
+<a href="#"><img src="images/guide.png" id="dh" width="60px" height="60px" title="导航"></a>
+<ul>
+<li><div class="e"><a href="index.html"><img src="images/dh1.png" id="dh1"></a></div></li>
+<li><div class="e"><a href="shanshui.html"><img src="images/dh2.png" id="dh2"></a></div></li>
+<li><div class="e"><a href="jianzhu.html"><img src="images/dh3.png" id="dh3"></a></div></li>
+<li><div class="e"><a href="renwen.html"><img src="images/dh4.png" id="dh4"></a></div></li>
+<li><div class="e"><a href="game.html"><img src="images/dh6.png" id="dh5"></a></div></li>
+<li><div class="e"><a href="techan.html"><img src="images/dh5.png" id="dh6"></a></div></li>
+</ul>
+</li>
+</ul>
 </div>
+</div>
+<!--导航栏--></div>
 </body>
 </html>

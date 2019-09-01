@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>休宁话</title>
+<style>
+.a1 {
+  position: relative;
+  width: 1000px;
+  height:620px;
+  margin: 0 auto;
+  
+}
+	.a2{position: absolute;top: 75px;left: 60px;}	
+	.return{position: absolute;top: 430px;left: 870px;}
+#tabs {
+    overflow: hidden;
+    width: 100%;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+#tabs a {
+	/*小导航*/
+	font-family: 楷体;
+	font-size: 21px;
+	text-align: center;
+	width: 198px;
+    float: left;
+    position: relative;
+    padding: 0 40px;
+    height: 0;
+    line-height: 30px;
+    text-decoration: none;
+    color: #000000;
+    border-bottom: 30px solid #AFBDCD;
+    border-bottom-color: #777\9;
+}
+#tabs a:hover {
+    border-bottom-color: #8D9DB1;
+    opacity: 1;
+}
+#tabs #current {
+	/*选中的那个颜色*/
+    z-index: 3;
+    border-bottom-color: #66788c;
+    opacity: 1;
+	color: #f5f5f5;
+    filter: alpha(opacity=100);
+}
+#content {
+    background-color:rgba(250,254,255,0.80);
+    padding: 2em;
+	height: 410px;
+	width:770px;
+	overflow: scroll;
+    /*内容的外框*/
+}
+#content h2,
+#content h3,
+#content p {
+    margin: 0 0 0px 0;
+}
+.panel,.flip
+{
+	font-family: 楷体;
+	font-size: 19px;
+	padding:5px;
+	text-align:center;
+	
+	border:solid 1px #8d9db1;
+}
+	.flip{background-color:rgba(179,197,221,0.30);}
+.panel
+{	background-color:rgba(250,254,255,0.60);
+	font-family: 楷体;
+	font-size: 19px;
+	padding:30px;
+	display:none;
+	text-align: left;
+	line-height: 30px;
+}
+	p{font-family: 楷体;font-size: 19px;text-shadow:1px 1px 5px #ffffff;line-height: 30px;line-height: 36px;}
+	.tupian1{position: relative;float: right;}
+	.tupian2{position: absolute;left: 30px;}
+	#title{position: absolute;left: 650px;top: 0px;}
+	#juzi{position: absolute;top: 40px;left: 400px;font-family: 楷体;font-size: 20px;font-weight: bold;color: #4D4D4D;}
+	#xuexi{position: absolute;left: 160px;}
+	</style>
+    <script src="jquery/jquery.min.js"></script>
+<script type="text/javascript">
+			var str="方言是地方文化的活化石";
+			var len=str.length;
+			var j=1;
+			function showword(){
+				document.getElementById("juzi").innerHTML=str.substr(0,j);
+				j++;
+				if(j>len){
+				clearInterval("done");
+				}
+				}
+				var done=setInterval("showword()",400);
+</script>
+<script> 
+$(document).ready(function(){
+  $(".flip").click(function(){
+    $(".panel").slideToggle("slow");
+  });
+});
+</script>
+</head>
+	
+<body>
+<div class="a1">
+            <img src="images/jz2.jpg" width="1000px" height="620px">
+		<div id="title"><img src="images/jz3-2.png" width="223px"></div>
+			<div id="juzi"></div>
+			<div class="a2">
+                    <ul id="tabs">
+                     <li><a href="#" name="#tab1">方言简介</a></li>
+                     <li><a href="#" name="#tab2">方言特点</a></li>
+                     <li><a href="#" name="#tab3">方言学习</a></li>
+                    </ul>
+                <div id="content">
+                        <div id="tab1">
+						<P>&nbsp;&nbsp;&nbsp;&nbsp;休宁话，即徽语休黟片休宁方言，今休宁县及屯溪区毗邻部分地区使用的方言，是徽州方言的一个分支，休宁话保留了很多的古音因素，和北方官话有着显著的差别。
+						<br>&nbsp;&nbsp;&nbsp;&nbsp;在休宁方言中，单音词丰富，如：有很多物名词不带“子”缀（被—被子、箱—箱子、桌—桌子、桃—桃子）；有一些亲属称谓词大都不重叠使用（公—外公、姊—姐姐、婄—奶奶、嫂—嫂子）；还有一些普通话习惯用双音节复合词。有的复合词虽词形与普通话相同，但词义却不相同，如：“学生”（方言还包括学徒义），“跌”（方言还包括物体丢失的意思）。此外，休宁方言还有许多他处方言没有的语言现象，像介词后置（将再吃一碗说成“吃一碗添”）等。	<br>&nbsp;&nbsp;&nbsp;&nbsp;
+							休宁方言保留了不少中国古音古韵，是宝贵的语言化石，如称“玩”为“嬉”等。现代方言学学者对徽语的研究仍不成熟，而徽语的博大精深之处仍等待人们去发现和研究。
+							</P>
+                        </div>
+                        <div id="tab2">
+							<p>&nbsp;&nbsp;&nbsp;&nbsp;休宁方言中不少方言词富有修辞色彩，有趣地反映了休宁人的形象思维。
+								<br>&nbsp;&nbsp;&nbsp;&nbsp;如：普通话的“黄昏”休宁话称为“挨夜边”。黄昏是“日落以后星出之前的时候”，而在休宁方言中称“黄昏”为“挨夜边”，取“挨着夜的旁边”意，从字面即可理解其含义。</p><div class="flip">查看更多形象思维的例子(再次点击可关闭)</div>
+<div class="panel">&nbsp;&nbsp;&nbsp;&nbsp;普通话中的“黄鳝”，休宁话称为“蛇鱼”。在《现代汉语词典》中释“黄鳝”为“鱼，身体象蛇而无鳞，黄褐色，有黑色斑点。生活在水边泥洞里，也叫鳝鱼”，就是这样一种似鱼非蛇的动物，在休宁方言中被称为“蛇鱼”，充分体现了黄鳝的特点，也反映了休宁人起名的智慧所在。	<br>&nbsp;&nbsp;&nbsp;&nbsp;
+直至今日，休宁方言依旧称 “楼上”为“阁上”，称“楼下”为“阁下”，称“楼板”为“阁板”。这就与古徽州民俗“未出阁的及笄少女不得下楼”联系上了。因为休宁属徽州府，徽州古民宅多为平房，青砖石瓦。徽商外出归来翻新修盖，无法扩大房屋的占地面积，则在空间上下功夫，在高高的平房上又架起一层较矮小的楼，雕梁画栋。	<br>&nbsp;&nbsp;&nbsp;&nbsp;
+此外，像休宁话称“右边”为“顺边”、“左边”为“反边”。这与人们平时的生活习惯相关联，用右手“顺手”，用左手则“不顺手”，因此将“顺手”的“右边”称为“顺边”，将“不顺手”的“左边”称为“反边”颇有符合人们生活习惯的味道。	<br>&nbsp;&nbsp;&nbsp;&nbsp;而把“中间”称作“中间心”，缘于古人认为“心”是人身体最重要的部分，而古徽州风俗中，祖宗画像是置于堂前正中的，由此可见“中间”这个位置是很重要的，将同样都很重要的“中间”与“心”相关联，则更显休宁人对堂前正中的重视程度，表明了休宁人尊崇先长的优良传统。	<br>&nbsp;&nbsp;&nbsp;&nbsp;
+休宁人还具有丰富的人文性，如：将整间房子视作一个人。房子本是毫无生气的，门是门，窗是窗，但在休宁人眼中，门槛犹如一个人的嘴里的舌头，故称门槛为“门舌儿”。又把一扇门看作人的胳膊，那“门背后”自然被称作“门后腋”了。
+</div><p>&nbsp;&nbsp;&nbsp;&nbsp;此外，休宁方言词汇不仅富有修辞特点，而且有些还<b>保存有古词，甚至延用古义。</b><br>&nbsp;&nbsp;&nbsp;&nbsp;比如：很多人都听说过“吃酒”这个词，但相信很多人并不知道还有“吃茶”“吃水”等等。在休宁方言中，“吃”不仅用于“吃饭”、“吃肉”，而且用于吞下流体的各种饮料，喝茶可以叫“吃茶”，喝酒通常称“吃酒”。也就是说，“吃”字在休宁方言中兼有古汉语的“食”与“饮”以及现代汉语的“吃”和“喝”的双重意义。<br>&nbsp;&nbsp;&nbsp;&nbsp;其实，“吃”和“喫”同。“喫”可训“食”，“食”又可训“饮”。《说文解字》：“喫，食也”，《正韵》：“食，饮也”。可见，“吃”可以兼有饮、食两种用法。
+</p>
+
+                        </div>
+                        <div id="tab3">
+                        <div id="xuexi"><iframe class="video_iframe" style="z-index:1;" src="http://v.qq.com/iframe/player.html?vid=p03764tlixr&amp;width=500&amp;height=375&amp;auto=0" allowfullscreen="" frameborder="0" height="400" width="800"></iframe></div>
+                </div>
+          </div>
+	<div class="return"><a href="jianzhu.html"><img src="images/return.png" width="50px"></a></div>
+</div>
+
+
+
+
+<script>
+    function resetTabs(){
+        $("#content > div").hide(); 
+        $("#tabs a").attr("id",""); 
+    }
+
+    var myUrl = window.location.href; 
+    var myUrlTab = myUrl.substring(myUrl.indexOf("#")); 
+    var myUrlTabName = myUrlTab.substring(0,4); 
+
+
+    (function(){
+
+        $("#content > div").hide(); 
+        $("#tabs li:first a").attr("id","current"); 
+        $("#content > div:first").fadeIn(); 
+        $("#tabs a").on("click",function(e) {
+            e.preventDefault();
+            if ($(this).attr("id") == "current"){
+                return
+            }
+            else{
+                resetTabs();
+               $(this).attr("id","current"); 
+              $($(this).attr('name')).fadeIn();
+            }
+        });
+
+
+        for (i = 1; i <= $("#tabs li").length; i++) {
+            if (myUrlTab == myUrlTabName + i) {
+                resetTabs();                $("a[name='"+myUrlTab+"']").attr("id","current"); 
+                $(myUrlTab).fadeIn(); 
+            }
+		}
+    })()
+</script>
+
+
+
+
+</body>
+</html>

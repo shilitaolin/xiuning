@@ -1,0 +1,258 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>齐云山</title>
+		<style>
+		* {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  outline: none;
+}
+.a1 {
+  position: relative;
+  width: 1000px;
+  height:620px;
+  margin: 0 auto;
+}
+
+.tab ul{list-style:none;display:table;}
+.tab ul li{float:left;width:60px;padding-left:8px;margin-right:-1px;cursor:pointer;}
+.tab ul li.active{color:#C8C8C8;font-weight:bold;}/*选中的tab*/
+	.content{position: absolute;top: 20px;left: 170px;width: 700px;height: 400px;}
+.tab .content>div{display:none;}
+.tab .content>div.active{display:block;}
+			#t1{position: absolute;top: 250px;left: 55px; font-family: 楷体;font-size: 23px;width: 20px;
+			color:#fefdfa}
+			#t1 li:hover{color:#C8C8C8;}
+			.a2{position: absolute;top: 35px;left: 180px;width:770px;height: 525px;background: rgba(254,251,246,0.5);border:solid 5px rgba(0,0,0,0.5);}
+			#g {position: absolute;top: 35px;left: 10px;}
+			.d{animation: dd 3s 1;}@keyframes dd{0%{opacity: 0;}100%{opacity: 1;}}
+			.e{animation: ee 1s 1;}@keyframes ee{0%{opacity: 0;}100%{opacity: 1;}}
+			
+			#h {position: absolute;top: 230px;left: 40px;}
+			#juzi{position: absolute;top: 10px;left: 600px;font-family: 楷体;font-size: 20px;font-weight: bold;color: #4D4D4D;}
+			.return {position: absolute;top: 490px;left: 54px;}
+			.return2{position: absolute;top: 490px;left: 54px;opacity: 0;transition: all 0.3s;}
+			 .c:hover .return2 {opacity: 0.4;}
+			#t2{position: absolute;top: 87px;left: -2px;}
+			#t3{position: absolute;top: 170px;left: -4px;}
+			.xian{position: absolute;top: 463px;opacity: 0.8;left: 190px;}
+			.dg1{position: absolute;top: 460px;left: 580px;opacity: 0.8;}
+			#next{position: absolute;top: 460px;left: 680px;opacity: 0.8;}
+			#next2{position: absolute;top: 460px;left: 700px;width: 100px;font-family: 楷体;font-size: 19px;opacity: 0.8;}
+			#next3{position: absolute;top: 460px;left: 700px;width: 100px;font-family: 楷体;font-size: 19px;opacity: 0.8;}
+			.dg11{position: absolute;left: 20px;top: 25px;}
+			#zi11{position: absolute;font-family: 楷体;top: 480px;left: 100px;font-size: 19px;}
+			#zi12{position: absolute;font-family: 楷体;top: 480px;left: 100px;font-size: 19px;}
+			#zi13{position: absolute;font-family: 楷体;top: 480px;left: 70px;font-size: 19px;}
+			.zi21{position: absolute;font-family: 楷体;top: 465px;left: 27px;font-size: 18px;width:680px;line-height: 29px; }
+			.dg111{position: absolute;top: 25px;left: 20px;width: 715px;background-color:rgba(254,251,246,0.86);font-family: 楷体;font-size: 18px;line-height: 28px;padding: 35px 20px;border:solid 3px rgba(0,0,0,0.5);height: 348px;}
+			.zc{position: absolute;font-family: 楷体;;background-color:rgba(254,251,246,0);border:solid 3px rgba(0,0,0,0);top: 425px;left: 170px;width: 500px;height: 16px;background: linear-gradient(to right,rgba(255,0,0,0),rgba(0,0,0,0.5),rgba(0,0,0,0.5),rgba(255,0,0,0));text-align: center;color: #FFF8F3;}
+			#dgd{display: none;}#dgs{display: none;}#dgf{display: none;}
+			#flz,#szy{display: none;}
+			#dg3{position: absolute;left: 20px;top: 460px;left: 580px;}
+			#s2,#s3,#s4,#s5,#s6{display: none;}#d2,#d3,#d4,#dg311{display: none;}
+		</style>
+<script src="jquery/jquery.min.js"></script>
+<script type="text/javascript">
+$(function ()
+{
+　　$(".tab li").click(function ()
+　　{
+　　　　//获取点击的元素给其添加样式，讲其兄弟元素的样式移除
+　　　　$(this).addClass("active").siblings().removeClass("active");
+　　　　//获取选中元素的下标
+　　　　var index = $(this).index();
+　　　　$(this).parent().siblings().children().eq(index).addClass("active")
+　　　　.siblings().removeClass("active");
+　　});
+});
+</script>
+<script>
+var i = 1;
+$(document).ready(function() {
+    $("#next").click(function(){
+		if(i==1){
+		$("#dfq").css("display","none");
+		$("#szy").fadeIn();
+			i++;
+		}else if(i==2){
+		$("#szy").css("display","none");
+		$("#flz").fadeIn();
+		$("#next").fadeOut();
+		$("#dg3").css("left","680px");
+		}
+	});
+	
+	$("#dg1").click(function(){
+		$("#dgd").fadeToggle();
+	});
+	$("#dg2").click(function(){
+		$("#dgs").fadeToggle();
+	});
+	$("#dg3").click(function(){
+		$("#dgf").fadeToggle();
+	});
+var j=1;
+	 $("#next2").click(function(){
+		if(j==1){
+		$("#s1").css("display","none");
+		$("#s2").fadeIn();
+			j++;
+		}else if(j==2){
+		$("#s2").css("display","none");
+		$("#s3").fadeIn();
+			j++;
+		}else if(j==3){
+		$("#s3").css("display","none");
+		$("#s4").fadeIn();
+			j++;
+		}else if(j==4){
+		$("#s4").css("display","none");
+		$("#s5").fadeIn();
+			j++;
+		}
+		 else if(j==5){
+		$("#s5").css("display","none");
+		$("#s6").fadeIn();
+		$("#next2").fadeOut();
+		/*$("#dg3").css("left","680px");*/
+		}
+	});
+var k=1;
+	 $("#next3").click(function(){
+		if(k==1){
+		$("#d1").css("display","none");
+		$("#d2").fadeIn();
+			k++;
+		}else if(k==2){
+		$("#d2").css("display","none");
+		$("#d3").fadeIn();
+			k++;
+		}
+		 else if(k==3){
+		$("#d3").css("display","none");
+		$("#d4").fadeIn();
+		$("#next3").fadeOut();
+		/*$("#dg3").css("left","680px");*/
+			 $("#dg31").css("left","700px");
+		}
+	});
+	$("#dg31").click(function(){
+		$("#dg311").fadeToggle();
+	});
+});
+</script>
+	</head>
+	<body><div class="a1">
+		<img src="images/ss-qys.jpg" width="1000px" height="620px">
+		<div class="d"><div id="g"><img src="images/ss-qys11.png"></div></div>
+		<div id="h"><img src="images/ss-qys1.png"></div>
+		<div class="c">
+		<div class="return"><a href="ss-qys.html"><img src="images/return7.png"></a></div>
+		<div class="return2"><a href="ss-qys.html"><img src="images/return7.png"></a></div></div>
+		<div class="a2"></div><div class="xian"><img src="images/ss-qysdg.png"></div>
+		<div class="tab">
+　　<ul id="t1">
+<li class="active">历史典故</li>
+<li id="t2">自然山水</li>
+<li id="t3">道教圣地</li>
+</ul>
+<div class="content">
+<!--111111111111111111111111-->
+　　<div  class="active">
+	  <div class="e">
+	  <div id="next"><img src="images/ss-qysdg2.png"></div>
+<!--登封桥-->
+<div id="dfq">
+		  <div class="dg1" id="dg1"><img src="images/ss-qysdg1.png"></div>
+		  <div class="dg11"><img src="images/ss-qys11-1.png"></div>
+		  <div id="zi11" class="d"><p>“登封桥上望一眼，高瞻远瞩福不浅”</p></div>
+	<!--查看典故-->
+		  <div id="dgd"><div class="dg111"><p>&nbsp;&nbsp;&nbsp;&nbsp;自明嘉靖皇帝求子灵验后，齐云山道教发展达到了巅峰，史载“香客日达三千之多”。这三千人过横江除了摆渡之外，则只能是绕道，十分不方便。明万历十五年(1587年)，时任徽州知府的古之贤体察民情，发出“修桥”倡议。经过民间募资和政府配套投入，历经三年桥成。取名“登峰桥”，寓意“登峰造极”。<br>&nbsp;&nbsp;&nbsp;&nbsp;然而，就在竣工典礼上，准备揭牌的时候，皇帝圣旨到了，因古之贤政绩突出，擢升为广东按察副使。真是大喜事一件，正当人们在想着用何种方式祝贺古知府升迁之喜时，有位乡贤提了个建议说：“不如在桥名上做文章，把山峰的峰字改成封官的封，以祝古知府步步登高如何？”话音刚落，在场的人都连声称道。<br>&nbsp;&nbsp;&nbsp;&nbsp;从此登封桥不仅是一条登齐云山的交通要道，更是人们心目中的吉祥之地。俗谚称：“登封桥上望一眼，高瞻远瞩福不浅”。对于仕途中人意义则更为重大，来登封桥则暗喻着“平步青云、步步登高”。</p></div>
+		  <div class="zc"><p>再次点击【查看典故】可关闭此页面</p></div></div></div>
+<!--寿字岩-->
+<div id="szy">
+		  <div class="dg1" id="dg2"><img src="images/ss-qysdg1.png"></div>
+		  <div class="dg11"><img src="images/ss-qys11-2.png"></div>
+		  <div id="zi12" class="d"><p>“齐云山上走一走，延年益寿九十九；<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;寿字底下摸一摸，定能活到一百多”</p></div>
+	<!--查看典故-->
+		  <div id="dgs"><div class="dg111"><p>&nbsp;&nbsp;&nbsp;&nbsp;徽州不仅有东南邹鲁之称，还是程朱理学的故里，朱熹就是徽州婺源人。<br>&nbsp;&nbsp;&nbsp;&nbsp;这个硕大的“寿”字就是他的墨宝。俗话说“齐云山上走一走，延年益寿九十九；寿字底下摸一摸，定能活到一百多”。这个寿字不但笔力浑厚、笔锋圆润而且尺寸非常吉祥。它高九尺九寸宽六尺六寸，不仅取九九归一、六六大顺之意，还暗含阴阳平衡之意，因为人体只有阴阳调和方能健康长寿。</p></div>
+		  <div class="zc"><p>再次点击【查看典故】可关闭此页面</p></div></div></div>
+<!--方腊寨-->
+<div id="flz">
+		  <div class="dg1" id="dg3"><img src="images/ss-qysdg1.png"></div>
+		  <div class="dg11"><img src="images/ss-qys11-3.png"></div>
+		  <div id="zi13" class="d"><p>原名独耸峰，因农民起义领袖方腊曾屯兵其上而得名。</p></div>
+	<!--查看典故-->
+		  <div id="dgf"><div class="dg111"><p>&nbsp;&nbsp;&nbsp;&nbsp;870多年前，方腊起义后，一个时期与童贯所率的官军作战受挫，曾率一部分人退守独耸峰上，独耸岩三面绝壁易守难攻。这个负向岩洞就是方腊洞，可屯兵千人。峰顶上还有天池遗迹。地上这些残砖碎瓦仿佛向我们诉说久远年代惨烈的战事。<br>&nbsp;&nbsp;&nbsp;&nbsp;
+独耸岩方圆有四十余亩，方腊曾屯积了许多粮草，天池又能蓄水，本可固守。后来义军中有小头目，见官军一围数月不退，担心被困死在山上，他便在一天夜里，掘开天池，放火烧了粮草，准备下山投敌，结果被巡哨的抓获处死。但山上已缺水缺粮，难以坚守。<br>&nbsp;&nbsp;&nbsp;&nbsp;
+方腊苦思妙计，命军士用公有的大米做饭喂饱了猎狗赶下山来，结果猎狗被官军射杀，剥皮开膛时见到了狗肚子里为米饭，那个叛徒掘天池时顺水流下大量鲤鱼，这些都迷惑了守军统领童贯。<br>&nbsp;&nbsp;&nbsp;&nbsp;
+童贯只好仰天长叹说：“方腊草贼看来水足粮多，一时难以剿灭。想我官军数月以来，损兵折将，军心涣散，不如先且退兵，别作良图。”方腊设计巧退敌军后，移师浙江。
+</p></div>
+		  <div class="zc"><p>再次点击【查看典故】可关闭此页面</p></div></div></div>
+</div></div><!--1-->
+<!--2222222222222222222222222-->
+　　<div class="e">
+	  <div id="next2"><img src="images/ss-qysdg3.png"><!--<i>下一页</i>--></div>
+<!--花海田园--><div id="s1">
+		  <div class="dg11"><img src="images/ss-qys12-1.png"></div>
+		  <div class="d" ><div class="zi21" ><p>齐云山下，阡陌纵横的田园，粉墙黛瓦的村落，勾勒出一幅如诗如画的桃源美景。烟火人间与月华天街遥相呼应、相映成趣，造就了齐云山天人合一的和谐画卷。</p></div></div></div>
+<!--五老峰--><div id="s2">
+	  <div class="dg11"><img src="images/ss-qys12-2.png"></div>
+		  <div class="d" ><div class="zi21"><p>形如一只手心面朝自己的巨大手掌，故有“五指峰”之称。同时又形如五位躬身面北，拱揖参拜的老者，所以又称“五老峰”。</p></div></div></div>
+<!--丹峰映霞--><div id="s3">
+	  <div class="dg11"><img src="images/ss-qys12-3.png"></div>
+		  <div class="d" ><div class="zi21"><p>这里的丹霞地貌发育于7200万年前，整座山体赤如朱砂、灿若红霞，在碧海云涛的掩映下，显得生动而耀眼。</p></div></div></div>
+<!--月华街--><div id="s4">
+	  <div class="dg11"><img src="images/ss-qys12-4.png"></div>
+		  <div class="d" ><div class="zi21"><p>因半悬峭壁之上，被称为“天街”，又称“月华天街”。“天街”上现有30户人家，大多从事旅游业，道士与山民杂居于此，徽派民居与道教建筑相映成趣。</p></div></div></div>
+<!--云岩湖--><div id="s5">
+	 <div class="dg11"><img src="images/ss-qys12-5.png"></div>
+		   <div class="d" ><div class="zi21"><p>云岩湖，湖体狭长，碧波如镜，峰奇水秀，岩奇石怪，景致多娇。灯笼峰为湖中奇景，几盏“灯笼”依崖悬列，令人叹为观止。</p></div></div></div>
+<!--楼上楼--><div id="s6">
+	  <div class="dg11"><img src="images/ss-qys12-6.png"></div>
+		  <div class="d" ><div class="zi21"><p>楼上楼属大自然的杰作，一整块巨大的山崖，因为差异性分化而形成上下两层岩洞的结构，故被称为“楼上楼”。</p></div></div></div>
+		</div><!--2-->
+<!--33333333333333333333333333333-->
+	<div class="e"><div id="next3"><img src="images/ss-qysdg3.png"><!--<i>下一页</i>--></div>
+<!--太极八卦-->
+		<div id="d1">
+	  <div class="dg11"><img src="images/ss-qys13-1.png"></div>
+		  <div class="d" ><div class="zi21"><p>能形成一年之中有着260天云海的天象景观，恰恰是得益于这里山环水曲、藏风聚气的风水环境，这也让齐云山成为了四大道教圣地之一。</p></div></div></div>
+<!--玉虚宫-->
+	  <div id="d2">
+	  <div class="dg11"><img src="images/ss-qys13-2.png"></div>
+		  <div class="d" ><div class="zi21"><p>展示了真武大帝一生的几个过程，为道术高妙的养素真人募化多年所建。</p></div></div></div>
+<!--玄天太素宫-->
+		<div id="d3">
+	  <div class="dg11"><img src="images/ss-qys13-3.png"></div>
+		  <div class="d" ><div class="zi21"><p>始建于南宋宝庆年间，后因嘉靖皇帝祈嗣灵验后敕建，而称“玄天太素宫”。此处风水极好。</p></div></div></div>
+<!--真仙洞府-->
+		<div id="d4">
+	  <div class="dg11"><img src="images/ss-qys13-4.png"></div>
+		  <div class="d" ><div class="zi21"><p>洞里正中所供奉的是玄武大帝的本相和人格化后的结合体，洞中有十八罗汉护卫玄武大帝的排列格局。</p></div></div><div class="dg1" id="dg31"><img src="images/ss-qysdg1.png"></div>
+			<!--查看典故-->
+		  <div id="dg311"><div class="dg111"><p>&nbsp;&nbsp;&nbsp;&nbsp;洞里正中所供奉的是玄武大帝的本相和人格化后的结合体。四向之神皆是动物造型，玄武本是龟和蛇的结合体，龟蛇既代表两种动物又代表阴阳。<br>&nbsp;&nbsp;&nbsp;&nbsp;在宋朝由于重文轻武导致国力孱弱，最大的威胁来自于北方的强邻。因而宋王朝就把玄武人格化后用来供奉，以祈求克制北方的强邻。<br>&nbsp;&nbsp;&nbsp;&nbsp;玄武的两边是十八罗汉，历史上佛道之争非常残酷，有三五一宗的灭佛事件，也有元朝的两次焚经事件也就是灭道事件。齐云山也存在这种佛道之争。宋之前佛道共存，到明朝由于嘉靖帝求子灵验后，对道教大力扶持，渐渐地佛教就退出齐云山，因而为了排挤佛教同时也是纪念这段历史就出现十八罗汉护卫玄武大帝的排列格局。
+</p></div>
+		  <div class="zc"><p>再次点击【查看典故】可关闭此页面</p></div></div></div>
+		</div>
+</div><!--3-->
+</div>
+		</div></div>	
+	</body>
+	<script src="js/carousel.min.js" type="text/javascript" charset="utf-8"></script>
+	<script type="text/javascript">
+		carousel(
+			$('.demo1'),	//必选， 要轮播模块(id/class/tagname均可)，必须为jQuery元素
+			{
+				type: 'fade',	//可选，默认左右(leftright) - 'leftright' / 'updown' / 'fade' (左右/上下/渐隐渐现)
+				arrowtype: 'move',	//可选，默认一直显示 - 'move' / 'none'	(鼠标移上显示 / 不显示 )
+				autoplay:true,	//可选，默认true - true / false (开启轮播/关闭轮播)
+				time:3000	//可选，默认3000
+			}
+		);
+	</script>
+</html>

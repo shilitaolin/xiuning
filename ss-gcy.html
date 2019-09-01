@@ -1,0 +1,260 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>古城岩</title>
+		<style>
+		* {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  outline: none;
+}
+.a1 {
+  position: relative;
+  width: 1000px;
+  height:620px;
+  margin: 0 auto;
+}
+			
+.pb-carouselWarp {
+    position: absolute;
+	top: 25px;
+	left: 25px;
+    width: 700px;
+    height: 450px;
+    overflow: hidden;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 50px;
+}
+.pb-carouselWarp .pb-carousel {
+  position: relative;
+  height: 100%;
+}
+.pb-carouselWarp .pb-carousel li {
+  display: none;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+}
+.pb-carouselWarp .pb-carousel li img {
+  width: 100%;
+  height: 100%;
+  vertical-align: middle;
+}
+.pb-carouselWarp .pb-carousel .pb-this {
+  display: block;
+  left: 0;
+}
+.pb-carouselWarp .pb-carousel-ind {
+  position: absolute;
+  bottom: 20px;
+  left: 50%;
+  transform: translateX(-10%);
+}
+.pb-carouselWarp .pb-carousel-ind li {
+  float: left;
+  width: 7px;
+  height: 14px;
+  border-radius: 50%;
+  background-color: #ccc;
+  margin: 0 5px;
+  cursor: pointer;
+}
+.pb-carouselWarp .pb-carousel-ind .pb-this {
+  background-color: #000;
+}
+.pb-carouselWarp .pb-arrow {
+  position: absolute;
+  top: 50%;
+  margin-top: -20px;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background: #000;
+  cursor: pointer;
+  border: none;
+}
+.pb-carouselWarp .pb-arrow-prev {
+  left: 20px;
+  background: #000000 url(images/arrow-left.png) no-repeat center;
+}
+.pb-carouselWarp .pb-arrow-next {
+  right: 35px;
+  background: #000000 url(images/arrow-right.png) no-repeat center;
+}
+.pb-carouselWarp[type='updown'] .pb-carousel-ind {
+  position: absolute;
+  width: 15px;
+  top: 50%;
+  left: auto;
+  bottom: auto;
+  right: 20px;
+  transform: translateY(-50%);
+}
+.pb-carouselWarp[type='updown'] .pb-carousel-ind li {
+  float: none;
+  width: 15px;
+  height: 15px;
+  border-radius: 50%;
+  background-color: #ccc;
+  margin: 5px 0;
+}
+.pb-carouselWarp[type='updown'] .pb-carousel-ind .pb-this {
+  background-color: #000;
+}
+.pb-carouselWarp[type='updown'] .pb-arrow {
+  position: absolute;
+  left: 50%;
+  top: 0;
+  margin-left: -20px;
+  margin-top: 0;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  color: #fff;
+  text-align: center;
+  line-height: 40px;
+  cursor: pointer;
+}
+.pb-carouselWarp[type='updown'] .pb-arrow-prev {
+  top: 20px;
+  background: #000000 url(images/arrow-top.png) no-repeat center;
+}
+.pb-carouselWarp[type='updown'] .pb-arrow-next {
+  top: auto;
+  bottom: 20px;
+  background: #000000 url(images/arrow-bottom.png) no-repeat center;
+}
+.pb-carouselWarp ul{width: 670px;}
+.tab ul{list-style:none;display:table;}
+.tab ul li{float:left;width:100px;line-height:85px;padding-left:8px;margin-right:-1px;cursor:pointer;}
+.tab ul li.active{color:#3F3F3F;font-weight:bold;}/*选中的tab*/
+	.content{position: absolute;top: 20px;left: 170px;width: 700px;height: 400px;}
+.tab .content>div{display:none;}
+.tab .content>div.active{display:block;}
+			#t1{position: absolute;top: 285px;left: 55px; font-family: 楷体;font-size: 31px;width: 20px;
+			color:#fefdfa}
+			#t1 li:hover{color:#B5B5B5;}
+			#j{position: absolute;top: 50px;left: 20px;overflow: scroll;height: 450px;width: 640px;
+				background-color:rgba(255,253,251,0.60);padding: 2em; }
+			#j h1{font-family: 楷体;font-size: 31px;text-shadow:1px 1px 5px #ffffff;line-height: 30px;}
+			#j p{font-family: 楷体;font-size: 19px;text-shadow:1px 1px 5px #ffffff;line-height: 40px;}
+			.a2{position: absolute;top: 60px;left: 20px;width: 687px;height: 470px;background: rgba(255,255,255,0.3);border:solid 5px rgba(0,0,0,0.5);}
+			#g {position: absolute;top: 65px;left: 5px;}
+			.d{animation: dd 5s 1;}@keyframes dd{0%{opacity: 0;}100%{opacity: 1;}}
+			.e{animation: ee 1s 1;}@keyframes ee{0%{opacity: 0;}100%{opacity: 1;}}
+			.a4 {position: absolute;top: 60px;left: 20px;width: 687px;height: 470px;background: rgba(255,255,255,0.3);border:solid 5px rgba(0,0,0,0.5);}
+			#sp{position: absolute;color:#fefdfa; left:35px;top: 2px;}
+			#h {position: absolute;top: 280px;left: 50px;}
+			#juzi{position: absolute;top: 10px;left: 600px;font-family: 楷体;font-size: 20px;font-weight: bold;color: #4D4D4D;}
+			.return {position: absolute;top: 540px;left: 64px;}
+			.return2{position: absolute;top: 540px;left: 64px;opacity: 0;transition: all 0.3s;}
+			 .c:hover .return2 {opacity: 0.4;}
+		</style>
+<script src="jquery/jquery.min.js"></script>
+<script type="text/javascript">
+$(function ()
+{
+　　$(".tab li").click(function ()
+　　{
+　　　　//获取点击的元素给其添加样式，讲其兄弟元素的样式移除
+　　　　$(this).addClass("active").siblings().removeClass("active");
+　　　　//获取选中元素的下标
+　　　　var index = $(this).index();
+　　　　$(this).parent().siblings().children().eq(index).addClass("active")
+　　　　.siblings().removeClass("active");
+　　});
+});
+
+</script>
+<script type="text/javascript">
+			var str="一座正逐渐消失的古徽州遗迹。";
+			var len=str.length;
+			var i=1;
+			function showword(){
+				document.getElementById("juzi").innerHTML=str.substr(0,i);
+				i++;
+				if(i>len){
+				clearInterval("done");
+				}
+				}
+				var done=setInterval("showword()",400);
+				</script>
+	</head>
+	<body><div class="a1">
+		<img src="images/ss-gcy.jpg" width="1000px" height="620px">
+		<div class="d"><div id="g"><img src="images/ss-gcy3.png"></div>
+		<div id="juzi"></div></div>
+		<div id="h"><img src="images/ss-qys1.png"></div>
+		<div class="c">
+		<div class="return"><a href="shanshui.html"><img src="images/return7.png"></a></div>
+		<div class="return2"><a href="shanshui.html"><img src="images/return7.png"></a></div></div>
+		<div class="tab">
+　　<ul id="t1">
+	  <li id="t2">介绍</li>
+	  <li class="active">图赏</li>
+	  <li>视频</li>
+</ul>
+<div class="content">
+　　<div>
+	  <div class="e">
+　　　　<div id="j"><h1>·古城岩介绍</h1><p>&nbsp;&nbsp;&nbsp;&nbsp;古城岩，坐落在休宁县万安镇东侧，以众多的古迹遗址、悠久的历史传承和寿山旭日的奇特景观而闻名于世。是国家AAA级景区。<br>&nbsp;&nbsp;&nbsp;&nbsp;景区内的古牌坊、古民居、古祠堂、古庙、古门楼、古牌楼、古桥、古塔等和汪王故宫、朱元璋避难洞、练心石、半亭、方丛竹等遗址及气势宏伟的万寿塔和谐布局，互为映衬，历史文化与自然山水完美融合，充分显示了古徽州古朴隽逸的风貌，精彩趣味的石雕、木雕、墨坊、罗盘制作等游客参与节目及具有浓郁地方特色的民间艺术表演，更让游客如痴如醉，宛如走进了遥远的明清社会。<br>&nbsp;&nbsp;&nbsp;&nbsp;
+			古城岩中有一象峰耸立于寿山右侧。巨象蹲伏，石鼻前伸，惟妙惟肖，下有石门夹峙，如双鹤引颈入崖内，俗称交杯石。山间藏有天然岩洞，相传朱元璋与陈友谅称雄角逐败北，曾避难于洞内。蜘蛛结网封洞口，朱元璋因此获救。山左前为狮峰，雄峙汶溪之滨。峰顶有巨岩悬突，上部略平，宽广近10米，名“练心石”，传为明末抗清英雄金声练剑处。山南旧有徽派园林，建筑典雅，名丰亭，门额题“溪山一览”。内设宽敞茶座，对景品茗，聊增游兴。园中广植花木，树影婆娑，修篁凌风，石台中植方竹丛，其竹上圆下方，苍虬可喜。一石岩间辟棋室，供人对弈。室外为交通大道，石板铺就，光洁平整。路旁石栏下，溪水聚汇成潭，昔为养鱼放生处，鱼大如长凳。路北有董其昌题“鱼乐园”三个径尺大字，刻石嵌于墙壁。狮峰左有文笔峰，峰巅筑七级浮屠，曰万寿塔。南麓有如虹卧波的大石桥，曰水南桥。昔有“汪王故宫”、“还古书院”，今已圮。<br>&nbsp;&nbsp;&nbsp;&nbsp;
+1998年，开发古城岩风景区将散落于全县各地的7幢明清古宅，修旧如旧，在狮峰下，依山就势，比肩竖立，重新焕发出古老徽派建筑的青春魅力；分布于各村镇要塞、水口的5座石牌坊，井然有序地集合于古城大道，以它们坚韧的个性，展示着不老的容颜。<br>&nbsp;&nbsp;&nbsp;&nbsp;
+景区内的罗盘、徽墨、石雕、木刻、竹雕等老作坊，形成一条小街，再现了“罗盘之乡”、“徽墨之乡”、“三雕之乡”的文化韵味和精湛工艺。
+		</p></div></div>
+　　</div>
+	<div class="active">
+　　<div><div class="e">
+	  <div class="a2">
+		 <!-- <img src="images/ss-gcy1.png" width="1000px" height="620px">-->
+	  </div>
+		<div class="pb-carouselWarp demo1">
+			<ul class="pb-carousel">
+				<li class="pb-this"><img src="images/ss-g1.jpg" alt="" /></li>
+				<li><img src="images/ss-g2.jpg" alt=""/></li>
+				<li><img src="images/ss-g3.jpg" alt=""/></li>
+				<li><img src="images/ss-g4.jpg" alt=""/></li>
+				<li><img src="images/ss-g5.jpg" alt=""/></li>
+			</ul>
+			<ul class="pb-carousel-ind">
+				<li class="pb-this"></li>
+				<li></li>
+				<li></li>
+				<li></li>
+				<li></li>
+			</ul>
+			<button class="pb-arrow pb-arrow-prev"></button>
+			<button class="pb-arrow pb-arrow-next" id="aa"></button>
+		</div></div></div>
+	</div>
+	
+		<div class="e">
+			<div class="a4"></div>
+
+	<div id="sp">
+					<video  width="670" height="520" controls preload>
+                        <source src="https://vdse.bdstatic.com//9a9ed23930c904657ac897f09cca2c2f?authorization=bce-auth-v1/fb297a5cc0fb434c971b8fa103e8dd7b/2017-05-11T09:02:31Z/-1//59bd66e80b2a9a77ed44e2b1dc29e5bf8bd630808bf4017b2f04c59c0aa05896" type='video/mp4'></source>
+                    </video></div>
+	</div>
+</div>
+</div>
+</div>		
+	</body>
+	<script src="js/carousel.min.js" type="text/javascript" charset="utf-8"></script>
+	<script type="text/javascript">
+		carousel(
+			$('.demo1'),	//必选， 要轮播模块(id/class/tagname均可)，必须为jQuery元素
+			{
+				type: 'fade',	//可选，默认左右(leftright) - 'leftright' / 'updown' / 'fade' (左右/上下/渐隐渐现)
+				arrowtype: 'move',	//可选，默认一直显示 - 'move' / 'none'	(鼠标移上显示 / 不显示 )
+				autoplay:true,	//可选，默认true - true / false (开启轮播/关闭轮播)
+				time:3000	//可选，默认3000
+			}
+		);
+	</script>
+</html>

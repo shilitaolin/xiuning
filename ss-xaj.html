@@ -1,0 +1,249 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>新安江</title>
+		<style>
+		* {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  outline: none;
+}
+.a1 {
+  position: relative;
+  width: 1000px;
+  height:620px;
+  margin: 0 auto;
+}
+.pb-carouselWarp {
+     position: absolute;
+	top: 25px;
+	left: 25px;
+    width: 700px;
+    height: 450px;
+    overflow: hidden;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 50px;
+}
+.pb-carouselWarp .pb-carousel {
+  position: relative;
+  height: 100%;
+}
+.pb-carouselWarp .pb-carousel li {
+  display: none;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+}
+.pb-carouselWarp .pb-carousel li img {
+  width: 100%;
+  height: 100%;
+  vertical-align: middle;
+}
+.pb-carouselWarp .pb-carousel .pb-this {
+  display: block;
+  left: 0;
+}
+.pb-carouselWarp .pb-carousel-ind {
+  position: absolute;
+  bottom: 20px;
+  left: 50%;
+  transform: translateX(-10%);
+}
+.pb-carouselWarp .pb-carousel-ind li {
+  float: left;
+  width: 10px;
+  height: 15px;
+  border-radius: 50%;
+  background-color: #ccc;
+  margin: 0 5px;
+  cursor: pointer;
+}
+.pb-carouselWarp .pb-carousel-ind .pb-this {
+  background-color: #000;
+}
+.pb-carouselWarp .pb-arrow {
+  position: absolute;
+  top: 50%;
+  margin-top: -20px;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background: #000;
+  cursor: pointer;
+  border: none;
+}
+.pb-carouselWarp .pb-arrow-prev {
+  left: 20px;
+  background: #000000 url(images/arrow-left.png) no-repeat center;
+}
+.pb-carouselWarp .pb-arrow-next {
+  right: 35px;
+  background: #000000 url(images/arrow-right.png) no-repeat center;
+}
+.pb-carouselWarp[type='updown'] .pb-carousel-ind {
+  position: absolute;
+  width: 15px;
+  top: 50%;
+  left: auto;
+  bottom: auto;
+  right: 20px;
+  transform: translateY(-50%);
+}
+.pb-carouselWarp[type='updown'] .pb-carousel-ind li {
+  float: none;
+  width: 15px;
+  height: 15px;
+  border-radius: 50%;
+  background-color: #ccc;
+  margin: 5px 0;
+}
+.pb-carouselWarp[type='updown'] .pb-carousel-ind .pb-this {
+  background-color: #000;
+}
+.pb-carouselWarp[type='updown'] .pb-arrow {
+  position: absolute;
+  left: 50%;
+  top: 0;
+  margin-left: -20px;
+  margin-top: 0;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  color: #fff;
+  text-align: center;
+  line-height: 40px;
+  cursor: pointer;
+}
+.pb-carouselWarp[type='updown'] .pb-arrow-prev {
+  top: 20px;
+  background: #000000 url(images/arrow-top.png) no-repeat center;
+}
+.pb-carouselWarp[type='updown'] .pb-arrow-next {
+  top: auto;
+  bottom: 20px;
+  background: #000000 url(images/arrow-bottom.png) no-repeat center;
+}
+.pb-carouselWarp ul{width: 670px;}
+.tab ul{list-style:none;display:table;}
+.tab ul li{float:left;width:100px;line-height:85px;padding-left:8px;margin-right:-1px;cursor:pointer;}
+.tab ul li.active{color:#3F3F3F;font-weight:bold;}/*选中的tab*/
+	.content{position: absolute;top: 20px;left: 170px;width: 700px;height: 400px;}
+.tab .content>div{display:none;}
+.tab .content>div.active{display:block;}
+			#t1{position: absolute;top: 275px;left: 45px; font-family: 楷体;font-size: 31px;width: 20px;
+			color:#fefdfa}
+			#t1 li:hover{color:#B5B5B5;}
+			#j{position: absolute;top: 50px;left: 20px;overflow: scroll;height: 450px;width: 640px;
+				background-color:rgba(255,253,251,0.60);padding: 2em; }
+			#j h1{font-family: 楷体;font-size: 31px;text-shadow:1px 1px 5px #ffffff;line-height: 30px;}
+			#j p{font-family: 楷体;font-size: 19px;text-shadow:1px 1px 5px #ffffff;line-height: 40px;}
+			.a2{position: absolute;top: 60px;left: 20px;width: 687px;height: 470px;background: rgba(255,255,255,0.3);border:solid 5px rgba(0,0,0,0.5);}
+			#s {position: absolute;top: 30px; left: 60px;}
+			#s h1{position: absolute;top: 40px; font-family: 楷体;font-size: 31px;line-height: 10px;}
+			
+			#g {position: absolute;top: 75px;left: 5px;}
+			.d{animation: dd 5s 1;}@keyframes dd{0%{opacity: 0;}100%{opacity: 1;}}
+			.e{animation: ee 1s 1;}@keyframes ee{0%{opacity: 0;}100%{opacity: 1;}}
+			.a4 img{position: absolute;opacity: 0.5;top: 10px;left: -40px;width:720px;height: 530px;}
+			#sp{position: absolute;color:#fefdfa; left: -15px;}
+			#h {position: absolute;top: 270px;left: 40px;}
+			#juzi{position: absolute;top: 20px;left: 620px;font-family: 楷体;font-size: 22px;font-weight: bold;color: #4D4D4D;}
+			.return img{position: absolute;top: 453px;left: 61px;}
+			.return2{position: absolute;top: 453px;left: 61px;opacity: 0;transition: all 0.3s;}
+			 .c:hover .return2 {opacity: 0.4;}
+		</style>
+<script src="jquery/jquery.min.js"></script>
+<script type="text/javascript">
+$(function ()
+{
+　　$(".tab li").click(function ()
+　　{
+　　　　//获取点击的元素给其添加样式，讲其兄弟元素的样式移除
+　　　　$(this).addClass("active").siblings().removeClass("active");
+　　　　//获取选中元素的下标
+　　　　var index = $(this).index();
+　　　　$(this).parent().siblings().children().eq(index).addClass("active")
+　　　　.siblings().removeClass("active");
+　　});
+});
+
+</script>
+<script type="text/javascript">
+			var str="钱塘江正源。";
+			var len=str.length;
+			var i=1;
+			function showword(){
+				document.getElementById("juzi").innerHTML=str.substr(0,i);
+				i++;
+				if(i>len){
+				clearInterval("done");
+				}
+				}
+				var done=setInterval("showword()",400);
+				</script>
+	</head>
+	<body><div class="a1">
+		<img src="images/ss-xaj.jpg" width="1000px" height="620px">
+		<div class="d"><div id="g"><img src="images/ss-xaj.png" width="156"></div>
+		<div id="juzi"></div></div>
+		<div id="h"><img src="images/ss-hjgy1.png"></div>
+		<div class="c">
+		<div class="return"><a href="shanshui.html"><img src="images/return3.png"></a></div>
+		<div class="return2"><a href="shanshui.html"><img src="images/return4.png"></a></div></div>
+		<div class="tab">
+　　<ul id="t1">
+	  <li id="t2">介绍</li>
+	  <li class="active">图赏</li>
+　　</ul>
+<div class="content">
+　　<div>
+	  <div class="e">
+　　　　<div id="j"><h1>·新安江介绍</h1><p>&nbsp;&nbsp;&nbsp;&nbsp;新安江，又称徽港，发源于安徽徽州（今黄山市）休宁县境内，东入浙江省西部，经淳安至建德与兰江汇合后为钱塘江干流桐江段、富春江段，东北流入钱塘江，是钱塘江正源。干流长373公里，流域面积1.1万多平方公里。<br>&nbsp;&nbsp;&nbsp;&nbsp;新安江水利资源较为丰富，流域内有丰乐、新安江两座水库。解放前其航运由屯溪直达杭州，解放后水库截断航线，航运几乎停顿。<br>&nbsp;&nbsp;&nbsp;&nbsp;沿途有屯溪老街、新安江山水画廊、花山谜窟、千岛湖等人文、自然景观，作为国家级风景名胜区向有<b>“奇山异水，天下独绝”</b>之称。<br>&nbsp;&nbsp;&nbsp;&nbsp;这里曾是几代徽州人走出大山追寻梦想的最佳通道，她成就了众多富甲天下的徽商巨贾、名噪一时的文人雅士和至今还令人津津乐道的新安画派。徽文化、徽医、徽剧（京剧的母本）、程朱理学、徽墨、歙砚等耳熟能详的徽州元素，随着一条条新安江上远去的小舟，融进了博大精深的中华文化之中。 
+
+
+		</p></div></div>
+　　</div>
+	<div class="active">
+　　<div><div class="e">
+	  <div class="a2"></div>
+		<div class="pb-carouselWarp demo1">
+			<ul class="pb-carousel">
+				<li class="pb-this"><img src="images/ss-xaj1.jpg" alt="" /></li>
+				<li><img src="images/ss-xaj2.jpg" alt=""/></li>
+				<li><img src="images/ss-xaj3.jpg" alt=""/></li>
+				<li><img src="images/ss-xaj4.jpg" alt=""/></li>
+				<li><img src="images/ss-xaj5.jpg" alt=""/></li>
+			</ul>
+			<ul class="pb-carousel-ind">
+				<li class="pb-this"></li>
+				<li></li>
+				<li></li>
+				<li></li>
+				<li></li>
+			</ul>
+			<button class="pb-arrow pb-arrow-prev"></button>
+			<button class="pb-arrow pb-arrow-next" id="aa"></button>
+		</div></div></div>
+	</div>
+</div>
+</div>
+</div>		
+	</body>
+	<script src="js/carousel.min.js" type="text/javascript" charset="utf-8"></script>
+	<script type="text/javascript">
+		carousel(
+			$('.demo1'),	//必选， 要轮播模块(id/class/tagname均可)，必须为jQuery元素
+			{
+				type: 'fade',	//可选，默认左右(leftright) - 'leftright' / 'updown' / 'fade' (左右/上下/渐隐渐现)
+				arrowtype: 'move',	//可选，默认一直显示 - 'move' / 'none'	(鼠标移上显示 / 不显示 )
+				autoplay:true,	//可选，默认true - true / false (开启轮播/关闭轮播)
+				time:3000	//可选，默认3000
+			}
+		);
+	</script>
+</html>

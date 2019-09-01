@@ -31,91 +31,11 @@
 #tips6{position: absolute;top: 90px;left: 255px;display: none;}
 #tips7{position: absolute;top: 95px;left: 415px;display: none;}
 #tips8{position: absolute;top: 30px;left: 220px;display: none;}
-	
-.text,p,#contain,#talk,i{
-	font-family:楷体;
-}
-
-#talk{
-	position: absolute;
-	top: 317px;
-	left: 220px;
-	width:600px;
-	height:170px;
-	background-color:rgba(80,80,80,0.70);
-	padding:10px 35px;
-	font-size: 24px;
-	font-weight: bold;
-	line-height: 36px;
-	color: #FFF;
-	display:none;
-	z-index: 10;
-}
-	#t2{display: none;}
-	
-#next{
-	color: #FFF;
-	font-size: 24px;
-	position:absolute;
-	left:640px;
-	top:420px;
-	z-index: 11;
-}
-#tg{
-	color: #FFF;
-	font-size: 24px;
-	position:absolute;
-	left:500px;
-	top:420px;
-	z-index: 11;
-}
-
-#dz img{
-	width:300px;
-	height:auto;
-	position: absolute;
-	left: 690px;
-	top: 325px;
-	z-index: 98;
-}
-	#dz1{
-		position: absolute;
-		top: 470px;
-		left: 460px;
-		z-index: 20;
-	}
-	#a2{display: none;}
-	#a3{position: absolute;top: 80px;left: -70px; width: 800px;}
 </style>
 	
 <script src="jquery/jquery.min.js" type="text/javascript" charset="utf-8"></script>	
 <script type="text/javascript">
 $(document).ready(function(){
-/*引导*/
-var i=1;
-$("#talk").fadeIn();
-	$("#dz").fadeIn();
-    $("#next").click(function(){
-		if(i==1){
-		$("#t1").css("display","none");
-		$("#t2").fadeIn();
-			i++;
-		}
-		else if(i==2){
-			$("#a2").fadeIn();	
-			$("#guide").fadeOut();
-		}
-	});
-	
-	
-	$("#tg").click(function(){
-		$("#a2").fadeIn();
-			$("#a3,#dz").css("display","none");
-	});
-	
-/*引导*/
-	
-/*简介*/
   $("#dt7").hover(function(){
     $("#tips1").fadeIn();
     },function(){
@@ -163,7 +83,7 @@ $("#dt8").hover(function(){
     },function(){
     $("#tips8").fadeOut();
   });
-/*简介*/
+
 });
 
 
@@ -173,16 +93,6 @@ $("#dt8").hover(function(){
 <body>
 <div class="a1">
 	<img src="images/dt.jpg" width="1000px" height="620px">
-	<div id="guide">
-	<div id="dz"><img src="images/daizhen.png"></div><div id="a3">
-	<div id="dz1"><img src="images/dz1.png" height="35px"></div>
-        <div id="talk">
-        <div id="t1"><p>&nbsp;&nbsp;你可以点击你想要了解的景点名字，我将会为你介绍。</p></div>
-		<div id="t2"><p>&nbsp;&nbsp;你也可以通过点击右上角的【测验】来检验你对休宁各景点的了解程度。</p></div></div>
-<div id="next"><i>点击继续</i></div>
-<div id="tg"><i>跳过引导</i></div></div></div>
-	
-
 	<div class="dt1"><a href="#"><img src="images/dt1.png"  width="40px" id="dt1"></a></div>
 	<div class="dt2"><a href="#"><img src="images/dt2.png"  width="40px" id="dt2"></a></div>
 	<div class="dt3"><a href="ss-hzdxg.html"><img src="images/dt3.png"  width="40px" id="dt3"></a></div>
@@ -191,7 +101,7 @@ $("#dt8").hover(function(){
 	<div class="dt6"><a href="ss-qys.html"><img src="images/dt6.png"  width="40px" id="dt6"></a></div>
 	<div class="dt7"><a href="#"><img src="images/dt7.png"  width="40px" id="dt7"></a></div>
 	<div class="dt8"><a href="ss-xaj.html"><img src="images/dt8.png"  width="40px" id="dt8"></a></div>
-<div id="a2">
+
 	<div id="tips"><p>小提示：触碰后会<b>放大</b>的景区标志才可以点进去查看详细介绍~	</p></div>
 <div id="tips1"><img src="images/ss-tips1.png"></div>
 <div id="tips2"><img src="images/ss-tips2.png"></div>
@@ -201,7 +111,6 @@ $("#dt8").hover(function(){
 <div id="tips6"><img src="images/ss-tips6.png"></div>
 <div id="tips7"><img src="images/ss-tips7.png"></div>
 <div id="tips8"><img src="images/ss-tips8.png"></div>
-</div>
 	<div class="dta"><a href="shanshui.html"><img src="images/dta.png" width="150px" ></a></div>
 	<div class="dtb"><a href="shanshuitest.html"><img src="images/dtb.png" width="100px"></a></div>
 

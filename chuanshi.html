@@ -11,36 +11,151 @@
   margin: 0 auto;
   
 }
+.a2{
+	position:absolute;
+	margin-left:-120px;
+	left:550px;	
+	top:410px;
+}
 .return{
 		position: absolute;
 		top:470px;
 		left:900px;
 	}
 #talk{
+	padding:10px 35px;
+	background-color:rgba(249,249,249,0.80);
 	font-family:楷体;
-	font-size: 23px;
+	font-size: 19px;
 	line-height: 40px;
 	position: absolute;
 	width: 800px;
-	top: 120px;
-	left: 100px;
+	height: 430px;
+	top: 90px;
+	left: 65px;
+	border-style:solid;
+    border-width:3px;
+	border-color:rgba(0,0,0,0.5);
+	overflow: scroll;
 }
+	#top{position: absolute;top:5px;left: 380px;}
+	#juzi{position: absolute;top: 50px;left: 320px;font-family: 楷体;font-size: 20px;}
+/*导航栏*/
+#dh
+{
+	position:absolute;
+	left:20px;
+	top:20px;
+	}
+	#dh{
+    transition:All 0.4s ease-in-out;
+}
+#dh:hover{
+    transform:rotate(45deg) scale(1);
+    cursor: cell;
+}
+#dh1:hover,#dh2:hover,#dh3:hover,#dh4:hover,#dh5:hover,#dh6:hover{
+	transform:scale(1.1);
+	}
+.dhl{
+	position:absolute;
+	left:0px;
+	top:0px;
+	height:200px;
+	z-index:999;
+	}
+.dhl ul {
+	list-style-type: none;
+	margin: 0px;
+	padding: 0px;
+}
+.dhl ul li a {
+	text-decoration:none;
+	display: block;
+	text-align: center;
+}
+.dhl ul li ul{
+	display:none;	
+}
+.dhl ul li:hover ul{
+	display:block;
+	position:absolute;
+	left:0px;
+	top:100px;/*选项高度*/
+}.e{animation: ee 1s 1;}@keyframes ee{0%{opacity: 0;}100%{opacity: 1;}}
+#dh1{position:absolute;top:-15px;left:15px;width:73px;height:64px;}	
+#dh2{position:absolute;top:50px;left:15px;width:74px;height:64px;}	
+#dh3{position:absolute;top:118px;left:15px;width:78px;height:60px;}	
+#dh4{position:absolute;top:180px;left:15px;width:78px;height:60px;}	
+#dh5{position:absolute;top:240px;left:10px;width:94px;height:65px;}	
+#dh6{position:absolute;top:290px;left:10px;width:93px;height:75px;}
+/*导航栏*/
 </style>
-
+<script type="text/javascript">
+			var str="";
+			var len=str.length;
+			var i=1;
+			function showword(){
+				document.getElementById("juzi").innerHTML=str.substr(0,i);
+				i++;
+				if(i>len){
+				clearInterval("done");
+				}
+				}
+				var done=setInterval("showword()",400);
+				</script>
 
 </head>
 
 <body>
 <div class="a1">
+	<div id="juzi"></div>
 	<div id="talk">
-        <p>
-          &nbsp;&nbsp;&nbsp;&nbsp;戴震，被梁启超先生评价为“前清学者第一人”，他在小学、哲学、数学、地理等方面皆取得丰硕的学术成果，其《原善》《孟子字义疏证》《方言疏证》《古历考》《考工图记》等50余种专著都有举足轻重的学术影响力。在学界，徽州文化被誉为后期中国封建社会的典型标本，与敦煌学和藏学并驾齐驱，成为当代中国三大地方显学，这也鲜明地反映出徽州文化的强大生命力。
-		<br/>&nbsp;&nbsp;&nbsp;&nbsp;徽州文化也滋养了许多其它的作家，创作出大量脍炙人口的佳作，南宋政治家、学者程大昌著《诗论》《演繁露》，元末明初的军事家、文学家朱升著《枫林集》，明代学者程敏政著《明文衡》《新安文献志》《休宁志》……休宁文化一代代传承，休宁文学一代代延续。
+        <p><b>·古代作品</b><br>
+          &nbsp;&nbsp;&nbsp;&nbsp;徽州文化被誉为后期中国封建社会的典型标本，与敦煌学和藏学并驾齐驱，成为当代中国三大地方显学，这也鲜明地反映出徽州文化的强大生命力。从古以来，徽州休宁所出的学者不计其数，也许学者无法被传承，但是他们做出的贡献、留下的文学作品都永远被历史铭记。<br>
+<b>·戴震</b><br>&nbsp;&nbsp;&nbsp;&nbsp;
+清代著名语言文字学家、哲学家、思想家。乾隆二十七年（1762年）举人，乾隆三十八年（1773年）被召为《四库全书》纂修官。乾隆四十年（1775年）第六次会试下第，因学术成就显著，特命参加殿试，赐同进士出身。卒于乾隆四十二年（1777年），享年五十五岁。<br>&nbsp;&nbsp;&nbsp;&nbsp;
+戴震治学广博，音韵、文字、历算、地理无不精通，又进而阐明义理，对理学家“去人欲，存天理”之说有所抨击。其视个体为真实、批判程朱理学的思想，对晚清以来的学术思潮产生了深远影响。梁启超称之为“前清学者第一人”，梁启超、胡适称之为中国近代科学界的先驱者。<br>&nbsp;&nbsp;&nbsp;&nbsp;
+戴震为与吴派并称的皖派（见乾嘉学派）主要代表。一生先后撰成《筹算》、《勾股割圆记》、《六书论》、《尔雅文字考》及《考工记图注》、《原善》、《尚书今文古文考》、《春秋改元即位考》、《诗经补注》、《声类表》、《方言疏证》、《声韵考》及《孟子字义疏证》等，并应河北、山西等地官员聘请，纂修《直隶河渠书》、《汾州府志》、《汾阳县志》，主讲浙江金华书院。乾隆三十八年，开《四库全书》馆，以举人受特召任纂修官。在馆五年，疑文奇义，累有辨析。先后经手校订《水经注》、《仪礼集释》、《周髀算经》、《孙子算经》、《张丘建算经》、《夏侯阳算经》、《海岛算经》及《五曹算经》诸书。逝世前夕，写有著名的《答彭进士允初书》。<br>
+
+<b>·程大昌</b><br>&nbsp;&nbsp;&nbsp;&nbsp;
+南宋时期政治家、思想家、文学家、哲学家。据说十岁能属文，高宗绍兴二十一年（公元1151年）进士。二十六年，除太平州教授。二十七年，召为大学正。三十年，迁秘书省正字。孝宗即位，擢著作佐郎，历国子司业兼权礼部侍郎、直学士院。<br>&nbsp;&nbsp;&nbsp;&nbsp;
+程大昌笃学，于古今事靡不考究。有《禹贡论》、《易原》、《雍录》、《易老通言》、《考古编》、《演繁露》、《北边备对》行于世。
+
+<b>·朱升</b><br>&nbsp;&nbsp;&nbsp;&nbsp;
+元末明初的军事家、文学家，明代开国谋臣，官至翰林学士。元末（1367年）被乡举荐为池州学正。弃官避隐石门，学者称枫林先生。后因向朱元璋建议“高筑墙、广积粮、缓称王”被采纳而闻名。主要成就有向明太祖献上三个计策：高筑墙，广积粮，缓称王，使得朱元璋有立国之基。为大明制定了礼乐制度，并收集后妃的故事，编修了《女诫》一书。<br>&nbsp;&nbsp;&nbsp;&nbsp;
+朱升一生有二十四本专著，著有《易书诗》、《周家仪礼》、《礼记》、《论语孟子》、《大学》、《中庸》、《考经》、《小学》旁注、书传辑正、书传补正、老子孙子旁注，还有小四书小学名、数医家诸书、葬书、内外传、刑统传解等，传世的有《前图》二卷、《枫林集》十卷，《四库总目》另有前图二卷，传于世。<br>
+
+<b>·程敏政</b><br>&nbsp;&nbsp;&nbsp;&nbsp;
+字克勤，中年后号篁墩，又号篁墩居士、篁墩老人、留暖道人，南直隶徽州府休宁县人，隶沈阳中屯卫籍，出生于河间。后居歙县篁墩（在今屯溪），故时人又称之为程篁墩。南京兵部尚书程信之子。<br>&nbsp;&nbsp;&nbsp;&nbsp;
+十岁时，以“神童”被荐入朝，由皇帝下诏，就读于翰林院，成化二年（1466年）中一甲二名进士，为同榜三百五十余人中最少者。历官左谕德，直讲东宫，学识渊博，为一时之冠。孝宗嗣位，擢少詹事，直经筵，官终礼部右侍郎。后涉徐经、唐寅科场案被诬鬻题而下狱。出狱后，愤恚发痈而卒，赠礼部尚书。<br>&nbsp;&nbsp;&nbsp;&nbsp;
+曾考合朱、陆二家始异终同之说， 成《道一编》六卷，发王阳明《朱子晚年定论》先声。晚年虽遭大狱，于廷辩之时，亦神色自若，言动如平日。于书无所不读，文章为一代宗匠。所编著刊刻有《明文衡》、《篁墩文集》、《碱贤奏对录》、《新安文献志》、《休宁志》、《咏史诗》、《宋遗民录》、《唐氏三先生集》、《真西山先生心经附注》、《程氏统宗谱》、《仪礼逸经》、《大学重订本》、《胡子知言》、《苏氏祷机》等近二十种，五百余卷。《休宁志》38卷，为休宁现存最早的一部县志。
+
 		</p>
 	</div>
-	<img src="images/continue.jpg" width="1000px" height="600px">
-	<div class="return">
-<a href="renwen.html"><img src="images/return.png"  width="60px"></a></div>
+		<img src="images/rw1.jpg" width="1000px" height="600px">
+	<div id="top"><img src="images/rw2.png" width="170px;"></div>
+<div class="return">
+	<a href="renwen0.html"><img src="images/return.png"  width="60px"></a></div>
+<!--导航栏-->
+<div class="pp">
+<div class="dhl">
+<ul>
+<li>
+<a href="#"><img src="images/guide.png" id="dh" width="60px" height="60px" title="导航"></a>
+<ul>
+<li><div class="e"><a href="index.html"><img src="images/dh1.png" id="dh1"></a></div></li>
+<li><div class="e"><a href="shanshui.html"><img src="images/dh2.png" id="dh2"></a></div></li>
+<li><div class="e"><a href="jianzhu.html"><img src="images/dh3.png" id="dh3"></a></div></li>
+<li><div class="e"><a href="renwen.html"><img src="images/dh4.png" id="dh4"></a></div></li>
+<li><div class="e"><a href="game.html"><img src="images/dh6.png" id="dh5"></a></div></li>
+<li><div class="e"><a href="techan.html"><img src="images/dh5.png" id="dh6"></a></div></li>
+</ul>
+</li>
+</ul>
+</div>
+</div>
+<!--导航栏-->
 	</div>
 </body>
 </html>

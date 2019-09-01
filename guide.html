@@ -4,100 +4,271 @@
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
 <title>引导</title>
 <script src="jquery/jquery-3.2.1.min.js"> </script>
+<script src="js/yinghua.js"></script>
 <style type="text/css">
+/*花瓣*/
+	body{
+    /*max-width:100%;*/
+    box-sizing: border-box;
+}
+#yinghua{
+    width:50px;
+    height:50px;
+    margin-top:-5%;
+    opacity: 0.8;
+    position: absolute;
+    z-index: 99;
+    /*-webkit-transform:rotate3d(.6,1,.6,45deg);*/
+    /*-moz-transform:rotate3d(.6,1,.6,45deg);*/
+    /*-ms-transform:rotate3d(.6,1,.6,45deg);*/
+    /*-o-transform:rotate3d(.6,1,.6,45deg);*/
+    /*transform:rotate3d(.6,1,.6,45deg);*/
 
+}
+/*花瓣*/
 .a1{
 	  position: relative;
       width: 1000px;
       height:620px;
       margin: 0 auto;
 }
-.text,p,#contain{
+.text,p,#contain,#talk,i{
 	font-family:楷体;
 }
-#tgqj{
-	position:absolute;
-	left:840px;
-	top:40px;
-}
-div div{
-	border-radius:25px;
-}
-#contain{
-	position:absolute;
-	width:600px;
-	left:30px;
-	top: 280px;
-}
-#pic{
-	height:120px;
-	display:none;
-}
+
 #talk{
-	width:700px;
-	height:150px;
-	background-color:rgba(0,0,0,0.5);
+	position: absolute;
+	top: 257px;
+	left: 190px;
+	width:600px;
+	height:210px;
+	background-color:rgba(0,0,0,0.4);
 	padding:20px 35px;
 	font-size: 24px;
 	font-weight: bold;
-	line-height: 26px;
+	line-height: 36px;
 	color: #FFF;
 	display:none;
 }
-#btn_next img{
+#talk p{
+		margin-left: 20px;
+		margin-right: 20px
+	}
+	#t2,#t3{display: none;}
+	#t4{position: absolute;
+	top: 300px;
+	left: 200px;
+	width:600px;
+	height:210px;
+	padding:20px 35px;
+	font-size: 20px;
+	line-height: 36px;
+		color: #FFF;display: none;}
+#next{
+	color: #FFF;
+	font-size: 24px;
+	position:absolute;
+	left:640px;
+	top:400px;
+}
+#tg{
+	color: #FFF;
+	font-size: 24px;
+	position:absolute;
+	left:500px;
+	top:400px;
+}
+#dz2{
+	color: #FFF;
+	font-size: 20px;
 	width:100px;
 	height:25px;
 	position:absolute;
-	left:500px;
-	top:260px;
+	left:550px;
+	top:475px;
+	z-index: 22;
+	opacity: 0.7;
 }
 
-#pic img{
+#dz img{
 	width:300px;
 	height:auto;
 	position: absolute;
-	left: 650px;
-	top: 40px;
+	left: 690px;
+	top: 325px;
+	z-index: 98;
 }
+	#dz1{
+		position: absolute;
+		top: 455px;
+		left: 350px;
+		z-index: 20;
+	}
+#dz3{
+	position: absolute;
+	top: 90px;
+	left: 190px;
+	width:600px;
+	height:150px;
+	background-color:rgba(0,0,0,0.4);
+	padding:0px 35px;
+	font-size: 20px;
+	line-height: 36px;
+	color: #FFF;
+	display: none;
+}
+	#ss,#rw,#mj,#fs,#yy{opacity: 0.8;}
+	#rw{position:absolute;top:330px;left:360px;display: none;}
+	#ss{position:absolute;left:650px;top:200px;display: none;}
+	#mj{position:absolute;left:40px;top:250px;display: none;}
+	#fs{position:absolute;left:430px;top:470px;display: none;}
+	#yy{position:absolute;top:60px;left:310px;display: none;}
+	/*导航栏*/
+#dh
+{
+	position:absolute;
+	left:20px;
+	top:20px;
+	}
+	#dh{
+    transition:All 0.4s ease-in-out;
+}
+#dh:hover{
+    transform:rotate(45deg) scale(1);
+    cursor: cell;
+}
+#dh1:hover,#dh2:hover,#dh3:hover,#dh4:hover,#dh5:hover,#dh6:hover{
+	transform:scale(1.1);
+	}
+.dhl{
+	position:absolute;
+	left:30px;
+	top:25px;
+	height:200px;
+	z-index:999;
+	}
+.dhl ul {
+	list-style-type: none;
+	margin: 0px;
+	padding: 0px;
+}
+.dhl ul li a {
+	text-decoration:none;
+	display: block;
+	text-align: center;
+}
+.dhl ul li ul{
+	display:none;	
+}
+.dhl ul li:hover ul{
+	display:block;
+	position:absolute;
+	left:0px;
+	top:100px;/*选项高度*/
+}.e{animation: ee 1s 1;}@keyframes ee{0%{opacity: 0;}100%{opacity: 1;}}
+#dh1{position:absolute;top:-15px;left:15px;width:73px;height:64px;}	
+#dh2{position:absolute;top:50px;left:15px;width:74px;height:64px;}	
+#dh3{position:absolute;top:116px;left:15px;width:78px;height:60px;}	
+#dh4{position:absolute;top:178px;left:15px;width:78px;height:60px;}	
+#dh5{position:absolute;top:238px;left:10px;width:94px;height:65px;}	
+#dh6{position:absolute;top:288px;left:10px;width:93px;height:75px;}
+/*导航栏*/
 </style>
 <script>
 var i = 1;
 $(document).ready(function() {
 
 	$("#talk").fadeIn();
-	$("#pic").fadeIn();
-    $("#btn_next").click(function(){
+	$("#dz").fadeIn();
+    $("#next").click(function(){
 		if(i==1){
-		$("p").text("什么？你问我是谁？几千年来，这里曾出过许多状元，我只是其中一个罢了。");i++;
+		$("#t1").css("display","none");
+		$("#t2").fadeIn();
+		
+			i++;
 		}else if(i==2){
-		$("p").text("一生痴绝处，无梦到徽州。休宁，是徽州的起源，但又有着自己的独特。");i++;}
+		$("#t2").css("display","none");
+		$("#t3,#t4").fadeIn();	$("#ss,#rw,#mj,#fs,#yy").fadeIn(3000);
+			i++;
+		}
 		else if(i==3){
-		$("p").text("你可以点击不同的标题来了解他。注意：游园玩乐小游戏需要对休宁有了一定了解才能玩哦。");i++;}
-		else if(i==4){
 			window.location.href='mulu.html?';
 		}
 	});
-	$("#tgqj").click(function(){
-		window.location.href='mulu.html?';
+	
+	$("#tg").click(function(){
+			window.location.href='mulu.html?';
 	});
+	
+	$("#dz1,#dz").hover(function(){
+    $("#dz3").fadeIn();
+    },function(){
+    $("#dz3").fadeOut();
+  });
+	
+//改成点击出现导游信息	
+//	$("#dz1").click(function(){
+//		$("#dz3").fadeToggle();
+//  	});
+
+
 });
 </script>
 </head>
 <body>
-<div class="a1">
-    <div id="contain">
-        <div id="pic"><img src="images/daizhen.png"></div>
-        <div id="talk">
-        <p>
-        你好，这里是我的家乡，安徽省黄山市休宁县。我将会是你的导游，带你了解这里的一切。
-        </p>
-        <div id="btn_next"><img src="images/dianji.png"></div>
-        <!--<div id="btn_last"><img src="picture/icon_last.png"></div>-->
-        </div>
-    </div>
-    <img id="tgqj" src="images/tiaoguo.png" width="60px" height="60px">
-	<img src="images/guidebg.jpg" width="1000px" height="620px">
+<!--花瓣-->
+<div class="cherry">
+<img id="yinghua" src="images/yinghua.png" alt="" >
 </div>
-<script src="js/wh.js"></script>
+<script>
+    $(function(){
+        $('.cherry').Cherry_Blossoms({
+            is_Cherry:true,//是否生成樱花
+            image_min:10,//花瓣最小宽度和高度
+            image_max:50,//花瓣最大宽度和高度
+            time_min:5000,//花瓣最快下坠时间
+            time_max:20000,//花瓣最慢下坠时间
+            interval:800//花瓣生成时间间隔
+        })
+    })
+</script>
+<!--花瓣-->
+<div class="a1"><img src="images/guidebg.jpg" width="1000px" height="620px">
+	<div id="rw"><img src="images/renwen.png"  width="200px"></div>
+	<div id="ss"><img src="images/shanshui.png"  width="200px"></div>
+	<div id="mj"><img src="images/minju.png"  width="200px"></div>
+	<div id="fs"><img src="images/fengsu.png"  width="200px"></div>
+	<div id="yy"><img src="images/you.png"  width="120px"></div>
+		<div id="dz"><img src="images/daizhen.png"></div>
+		<div id="dz1"><img src="images/dz1.png"></div>
+        <div id="talk">
+        <div id="t1"><p>&nbsp;&nbsp;你好，这里是我的家乡，安徽省黄山市休宁县。我将会是你的导游，带你了解这里的一切。</p></div>
+		<div id="t2"><p>&nbsp;&nbsp;一生痴绝处，无梦到徽州。休宁，是徽州的起源，但又有着自己的独特。</p></div>
+		<div id="t3"><p>你可以点击刚刚出现的这些标题来了解他。</p></div></div>
+<div id="t4"><p>注意：游园玩乐小游戏需要对休宁有了一定了解才能玩哦。</p></div>
+<div id="dz3"><p><b>&nbsp;&nbsp;戴震</b>，清代学者，《四库全书》纂修官。既是乾嘉考据学久负盛名的“皖派宗师”，又是在儒学内部最早批判“以理杀人”的思想家。被梁启超誉为“前清学者第一人”。</p></div>
+<div id="dz2"><i>导游信息>></i></div>
+<div id="next"><i>点击继续</i></div>
+<div id="tg"><i>跳过引导</i></div>
+<!--导航栏-->
+<div class="pp">
+<div class="dhl">
+<ul>
+<li>
+<a href="#"><img src="images/guide.png" id="dh" width="60px" height="60px" title="导航"></a>
+<ul>
+<li><div class="e"><a href="index.html"><img src="images/dh1.png" id="dh1"></a></div></li>
+<li><div class="e"><a href="shanshui.html"><img src="images/dh2.png" id="dh2"></a></div></li>
+<li><div class="e"><a href="jianzhu.html"><img src="images/dh3.png" id="dh3"></a></div></li>
+<li><div class="e"><a href="renwen.html"><img src="images/dh4.png" id="dh4"></a></div></li>
+<li><div class="e"><a href="game.html"><img src="images/dh6.png" id="dh5"></a></div></li>
+<li><div class="e"><a href="techan.html"><img src="images/dh5.png" id="dh6"></a></div></li>
+</ul>
+</li>
+</ul>
+</div>
+</div>
+<!--导航栏-->
+	</div>
 </body>
 </html>

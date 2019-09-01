@@ -1,0 +1,230 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>徽派建筑</title>
+<style>
+.a1 {
+  position: relative;
+  width: 1000px;
+  height:620px;
+  margin: 0 auto;
+  
+}
+	.a2{position: absolute;top: 60px;left: 140px;}	
+	.return{position: absolute;top: 330px;left: 920px;}
+#tabs {
+    overflow: hidden;
+    width: 100%;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+#tabs a {
+	/*小导航*/
+	font-family: 楷体;
+	font-size: 24px;
+	text-align: center;
+	width: 111px;
+    float: left;
+    position: relative;
+    padding: 0 40px;
+    height: 0;
+    line-height: 30px;
+    text-decoration: none;
+    color: #000000;
+    border-bottom: 30px solid #AFBDCD;
+    border-bottom-color: #777\9;
+}
+#tabs a:hover {
+    border-bottom-color: #8D9DB1;
+    opacity: 1;
+}
+#tabs #current {
+	/*选中的那个颜色*/
+    z-index: 3;
+    border-bottom-color: #66788c;
+    opacity: 1;
+	color: #f5f5f5;
+    filter: alpha(opacity=100);
+}
+#content {
+    background-color:rgba(250,254,255,0.60);
+    padding: 2em;
+	height: 400px;
+	width:700px;
+	overflow: scroll;
+    /*内容的外框*/
+}
+#content h2,
+#content h3,
+#content p {
+    margin: 0 0 0px 0;
+}
+	p{font-family: 楷体;font-size: 19px;text-shadow:1px 1px 5px #ffffff;line-height: 30px;}
+	.tupian1{position: absolute;top: 115px;left: 80px;}
+	.tupian2{position: relative;top: 0px;left: 30px;}
+	#panel1,#flip1
+{
+	font-family: 楷体;
+	font-size: 19px;
+	padding:5px;
+	text-align:center;
+	
+	border:solid 1px #8d9db1;
+}
+	#flip1{background-color:rgba(179,197,221,0.30);}
+#panel1
+{	background-color:rgba(250,254,255,0.60);
+	font-family: 楷体;
+	font-size: 19px;
+	padding:30px;
+	display:none;
+	text-align: left;
+	line-height: 30px;
+}
+#panel2,#flip2
+{
+	font-family: 楷体;
+	font-size: 19px;
+	padding:5px;
+	text-align:center;
+	
+	border:solid 1px #8d9db1;
+}
+	#flip2{background-color:rgba(179,197,221,0.30);}
+#panel2
+{	background-color:rgba(250,254,255,0.60);
+	font-family: 楷体;
+	font-size: 19px;
+	padding:30px;
+	display:none;
+	text-align: left;
+	line-height: 30px;
+}
+	</style>
+    <script src="jquery/jquery.min.js"></script>
+<script>
+$(document).ready(function(){
+  $("#flip1").click(function(){
+    $("#panel1").slideToggle("slow");
+  });
+});
+$(document).ready(function(){
+  $("#flip2").click(function(){
+    $("#panel2").slideToggle("slow");
+  });
+});
+</script>
+
+</head>
+	
+<body>
+<div class="a1">
+            <img src="images/jz1.jpg" width="1000px" height="620px">
+			<div class="a2">
+                    <ul id="tabs">
+                     <li><a href="#" name="#tab1">简介</a></li>
+                     <li><a href="#" name="#tab2">建筑特色</a></li>
+                     <li><a href="#" name="#tab3">历史起源</a></li>
+					<li><a href="#" name="#tab4">建筑结构</a></li>
+                    </ul>
+                <div id="content">
+                        <div id="tab1">
+                            <p>&nbsp;&nbsp;&nbsp;&nbsp;徽派建筑，又称徽州建筑，中国古建筑中最重要的流派之一。流行于安徽南部及严州、金华、衢州等浙西地区。徽派建筑作为徽文化的重要组成部分，历来为中外建筑大师所推崇，并非特指安徽建筑。<br><br><br><br><br></p><div class="tupian1"><img src="images/jz2-3.png" height="200px;"></div><p>
+<br>&nbsp;&nbsp;&nbsp;&nbsp;徽派建筑在总体布局上，依山就势，构思精巧，自然得体；在平面布局上规模灵活，变幻无穷；在空间结构和利用上，造型丰富，讲究韵律美，以马头墙、小青瓦最有特色；在建筑雕刻艺术的综合运用上，融石雕、木雕、砖雕为一体，显得富丽堂皇，却也不失宁静致远。
+</p>
+                        </div>
+                        <div id="tab2">
+			<div class="tupian2"><img src="images/jz2-4.png" height="150px;"></div>
+			<p><br>1.<b>马头墙</b>	<br>&nbsp;&nbsp;&nbsp;&nbsp;徽派建筑的灵魂。</p>
+
+			<div id="flip1">点击了解马头墙(再次点击可关闭)</div>
+<div id="panel1">&nbsp;&nbsp;&nbsp;&nbsp;
+	马头墙，又名封火墙、防火墙，是指高出两边山墙墙面的墙垣，也就是山墙的墙顶部分，因形状酷似马头，故称“马头墙”。马头墙是徽派建筑的标志，它的墙面以白灰粉刷，墙头覆以青瓦两坡墙檐，白墙青瓦，明朗而雅素。<br>&nbsp;&nbsp;&nbsp;&nbsp;
+	从实用性来说，徽州地处东南山区，多风多雨易潮湿，暴风重者吹毁房屋，轻者吹翻屋瓦，因此，盖砖墙瓦顶较为实用；徽州多山多树，建筑材料大量利用砖木结构，在屋顶边的处理上往往较难，若直接用瓦收边，风极易吹掉瓦片，漏渗水问题也难以解决，所以马头墙具有一定程度上对建筑的保护实用功能。<br>&nbsp;&nbsp;&nbsp;&nbsp;
+	从艺术性来说，徽派建筑的色彩很有特色，以黑、白、灰的层次变化组成统一的建筑色调，而且马头墙与徽派建筑的整体色彩倾向是一致的，它的色彩基调以粉墙黛瓦为主。马头墙的造型与人们对马的喜爱也有着千丝万缕的联系，是一种“寓意于形”的美学思想。马头墙的“马头”通常是“金印式”或“朝笏式”，寓意了主人对“读书做官”理想的追求。<br>&nbsp;&nbsp;&nbsp;&nbsp;
+徽州受到宋代的朱熹和清代的戴震两位大师的美学思想影响，他们都主张人与自然的共存，相通与和谐，这种人与自然环境之间和谐统一的思想观念对马头墙的美学价值是一种有形或无形的影响。
+</div>
+	<p><br><b>2.徽州三雕</b><br>&nbsp;&nbsp;&nbsp;&nbsp;指具有徽派风格的砖雕，石雕和木雕。手法多样，表现内容和形式丰富，题材广泛。工艺精湛。<div id="flip2">点击了解徽州三雕(再次点击可关闭)</div>
+<div id="panel2"><p>&nbsp;&nbsp;&nbsp;&nbsp;徽州三雕是指具有徽派风格的砖雕、石雕、木雕三种中国民间雕刻工艺的简称。主要用于民居、祠堂、庙宇、园林等建筑的装饰，以及古式家具、屏联、笔筒、果盘等工艺雕刻。“三雕”的历史源于宋代，至明清而达极盛。明代雕刻粗矿、古朴，一般只有平雕和浅浮雕，借助于线条造型，而缺乏透视变化，但强调对称，富于装饰趣味。清代雕刻细腻蘩复，构图、布局吸收了新安画派的表现手法，讲究艺术美，多用深浮雕和圆雕，提倡镂空效果，有的镂空层次多达十余层，亭台楼谢，树本山水，人物走兽，花鸟虫鱼集于同一画面，玲现剔透，错落有致，层次分明，栩栩如生，显示了雕刻工匠高超的艺术才能。<br>&nbsp;&nbsp;&nbsp;
+	砖雕是徽州盛产质地坚细的青灰砖上经过精致的雕镂而形成的建筑装饰，广泛用于徽派风格的门楼、门套、门楣、屋檐、屋顶、屋瓴等处，使建筑物显得典雅、庄重。它是明清以来兴起的徽派建筑艺术的重要组成部份。<br>&nbsp;&nbsp;&nbsp;
+	石雕在徽州城乡布很广，类别亦多，主要用于寺宅的廊柱、门墙、牌坊、墓葬等处装饰，属浮雕与圆雕艺术，享誉甚高。徽州石雕题材受雕刻材料本身限制，不及木雕与砖雕复杂，主要是动植物形象、博古纹样和书法，至于人物故事与山水则较为少见。<br>&nbsp;&nbsp;&nbsp;
+	木雕主要用于旧时建筑物和家庭用具上的装饰，遍及城乡，其分布之广在全国随处可见。宅院内的屏风、窗楹、栏柱，日常使用的床、桌、椅、案和文房用具上均可一睹木雕的风采，几乎是无村不有。徽州木雕的题材广泛，有人物、山水、花卉、禽兽、虫鱼、云头、回纹、八宝博古、文字锡联，以及各种吉祥图案等。徽州木雕是根据建筑物体的部件需要与可能，采用圆雕、浮雕、透雕等表现手法。明代初年。徽派木雕已初具规模，雕风拙朴粗扩，以平面淡浮雕手法为主。</p>
+</p>
+</div>
+	<p>	
+		
+		<b>3.颜色</b><br>&nbsp;&nbsp;&nbsp;&nbsp;徽派建筑在选色上，反差很大。以黑白为主。徽州民居的外部形态主要有大块白色墙体构成。日出到日落，光的投影变幻无穷。		
+<br><b>4.对称</b><br>&nbsp;&nbsp;&nbsp;&nbsp;徽派建筑讲究对称。由一个中轴线向四周展开。空间立体感强。这也是中式建筑的共同特征。
+</p>
+                        </div>
+                        <div id="tab3"><p>1.聚族而居<br>&nbsp;&nbsp;&nbsp;&nbsp;
+古徽州盛行敦本敬祖之风，各村均建祠堂，且有宗祠、支祠、家祠之分。据《寄园寄所寄》载：“聚族而居，绝无一杂姓搀入者。其风最为近古。出入齿让，姓各有宗祠统之，岁时伏腊，一姓村中千丁皆集，祭用朱文公家礼，彬彬合度。”<br>
+2.山地特征<br>&nbsp;&nbsp;&nbsp;&nbsp;
+徽州古民居大多坐落在青山绿水之间，依山傍水，与亭、台、楼、阁、塔、坊等建筑交相辉映，构成“小桥、流水、人家”的优美境界。黟县宏村，背靠古木参天的雷岗山，前临风光旖旎的南湖，傍依碧水萦回的浥溪河，整个村落设计成牛形，景色极为秀丽，有“中国画里的乡村”之称。<br>
+3.文化倾向<br>&nbsp;&nbsp;&nbsp;&nbsp;
+古徽州文风昌盛、教育发达，“以才入仕、以文垂世”者代不乏人，灿若繁星。为宣扬封建的伦理道德，表彰宦绩政声、孝子义士、节妇烈女等，徽州人多采用“立牌坊”的办法以传显荣光，流芳百世。古牌坊结构严谨、布局合理、规模宏大，每一块梁枋，每一件镶嵌都合乎力度，在建造上讲究选址、造型、雕刻、用料等。牌坊型制不一，有楼脊式，“冲天柱”式；有方形四柱、八柱，也有“一字型”单门和三门的；有遍饰雕刻、工致华丽，也有平琢浑磨、不事雕饰的，其排列有纵列七道、四道，也有三座横列一排。<br>
+4.徽商意愿<br>&nbsp;&nbsp;&nbsp;&nbsp;
+明清时代，徽商称雄商界长达二、三百年。明《五俎》云：“商贾之称雄者，江南首推徽州，江北则推山右(山西)。”明代中叶以后随着徽州邦的崛起，一批拥有资本十万、百万的富商大贾不断涌现，清代垄断盐经营的徽商竟富得可以先后接待清帝康熙、乾隆南巡，支援左宗棠平定新疆。再加上徽商贾而好儒，广交官府、文士，的本人就有较好的文化素养，徽商是官、贾、儒三位一体。因而出了大批官僚，有的成为朝中显贵，他们为荣宗光祖，炫耀乡里，除购置土地外，大部份用于奢侈性消费，大兴土木，建筑豪华的住宅、园林、书院、祠社、学校等。这些古建筑，风格独特，布局合理，装饰精致，变化自然,具有乡土气息。加之徽州盛产木材，民间向有雕刻、绘画传统，砖、木、石雕别具一格，因而形成颇具地方特色的建筑，被誉为：“中国建筑艺术的一大派系——徽派建筑。”
+</p>
+                        </div>
+					<div id="tab4">
+					<p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;徽派建筑的结构多为多进院落式（小型者多为三合院式），一般坐北朝南，倚山面水。布局以中轴线对称分列，面阔三间，中为厅堂，两侧为室，厅堂前方称“天井”，采光通风，亦有“四水归堂”的吉祥寓意。<br>&nbsp;&nbsp;&nbsp;&nbsp;
+民居外观整体性和美感很强，高墙封闭，马头翘角者谓之“武”，方正者谓之“文”，墙线错落有致，黑瓦白墙，色彩典雅大方。在装饰方面，大都采用砖、木、石雕工艺，如砖雕的门罩，石雕的漏窗，木雕的窗棂、楹柱等，使整个建筑精美如诗。作为一个传统建筑流派，徽派建筑融古雅、简洁、富丽为一体，它至今仍保持着独有的艺术风采。<br>&nbsp;&nbsp;&nbsp;&nbsp;
+徽派古建筑以砖、木、石为原料，以木构架为主。梁架多用料硕大，且注重装饰。其横梁中部略微拱起，故民间俗称为“冬瓜梁”，两端雕出扁圆形(明代)或圆形(清代)花纹，中段常雕有多种图案，通体显得恢宏、华丽、壮美。<br>&nbsp;&nbsp;&nbsp;&nbsp;
+立柱用料也颇粗大，上部稍细。明代立柱通常为梭形。梁托、爪柱、叉手、霸拳、雀替(明代为丁头拱)、斜撑等大多雕刻花纹、线脚。梁架构件的巧妙组合和装修使工艺技术与艺术手法相交融，达到了珠联璧合的妙境。梁架一般不施彩漆而髹以桐油，显得格外古朴典雅。墙角、天井、栏杆、照壁、漏窗等用青石、红砂石或花岗岩裁割成石条、石板筑就，且往往利用石料本身的自然纹理组合成图纹。墙体基本使用小青砖砌至马头墙。
+</p>
+					</div>
+                </div>
+          </div>
+	<div class="return"><a href="jianzhu.html"><img src="images/return2.png"></a></div>
+</div>
+
+
+
+
+<script>
+    function resetTabs(){
+        $("#content > div").hide(); 
+        $("#tabs a").attr("id",""); 
+    }
+
+    var myUrl = window.location.href; 
+    var myUrlTab = myUrl.substring(myUrl.indexOf("#")); 
+    var myUrlTabName = myUrlTab.substring(0,4); 
+
+
+    (function(){
+
+        $("#content > div").hide(); 
+        $("#tabs li:first a").attr("id","current"); 
+        $("#content > div:first").fadeIn(); 
+        $("#tabs a").on("click",function(e) {
+            e.preventDefault();
+            if ($(this).attr("id") == "current"){
+                return
+            }
+            else{
+                resetTabs();
+               $(this).attr("id","current"); 
+              $($(this).attr('name')).fadeIn();
+            }
+        });
+
+
+        for (i = 1; i <= $("#tabs li").length; i++) {
+            if (myUrlTab == myUrlTabName + i) {
+                resetTabs();                $("a[name='"+myUrlTab+"']").attr("id","current"); 
+                $(myUrlTab).fadeIn(); 
+            }
+		}
+    })()
+</script>
+
+
+
+
+</body>
+</html>

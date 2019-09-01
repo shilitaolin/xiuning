@@ -2,8 +2,8 @@
 <html>
 <head>
 <meta charset="utf-8">
-<title>烁今</title>
-<style type="text/css">
+<title>人文荟萃</title>
+<style>
 .a1 {
   position: relative;
   width: 1000px;
@@ -11,35 +11,71 @@
   margin: 0 auto;
   
 }
-.a2{
+.zg{
 	position:absolute;
-	margin-left:-120px;
-	left:550px;	
-	top:410px;
+	top:150px;
+	left:200px;
 }
+	.m1{
+		position:absolute;
+		top:110px;
+		left:170px;
+		opacity:0;
+        transition: all 1s;
+	}
+    .c1:hover .m1 {
+        opacity: 0.6;
+    }
+.cs{
+	position:absolute;
+	left:500px;
+	top:230px;
+}
+	.m2{
+		position:absolute;
+		top:180px;
+		left:450px;
+		opacity:0;
+        transition: all 1s;
+	}
+    .c2:hover .m2 {
+        opacity:0.6;
+    }
+.sj{
+	position:absolute;
+	left:430px;
+	top:400px;
+}
+	.m3{
+		position:absolute;
+		top:350px;
+		left:400px;
+		opacity:0;
+        transition: all 1s;
+	}
+    .c3:hover .m3 {
+        opacity: 0.6;
+    }
+.kj{
+	position:absolute;
+	left:710px;
+	top:120px;
+}
+	.m4{
+		position:absolute;
+		top:60px;
+		left:670px;
+		opacity:0 ;
+        transition: all 1s;
+	}
+    .c4:hover .m4 {
+        opacity: 0.6;
+    }
 .return{
 		position: absolute;
 		top:470px;
 		left:900px;
 	}
-#talk{
-	padding:10px 35px;
-	background-color:rgba(249,249,249,0.80);
-	font-family:楷体;
-	font-size: 19px;
-	line-height: 40px;
-	position: absolute;
-	width: 800px;
-	height: 430px;
-	top: 90px;
-	left: 65px;
-	border-style:solid;
-    border-width:3px;
-	border-color:rgba(0,0,0,0.5);
-	overflow: scroll;
-}
-	#top{position: absolute;top:5px;left: 360px;}
-	#juzi{position: absolute;top: 50px;left: 320px;font-family: 楷体;font-size: 20px;}
 	/*导航栏*/
 #dh
 {
@@ -59,8 +95,8 @@
 	}
 .dhl{
 	position:absolute;
-	left:0px;
-	top:0px;
+	left:50px;
+	top:25px;
 	height:200px;
 	z-index:999;
 	}
@@ -91,37 +127,42 @@
 #dh6{position:absolute;top:290px;left:10px;width:93px;height:75px;}
 /*导航栏*/
 </style>
-<script type="text/javascript">
-			var str="";
-			var len=str.length;
-			var i=1;
-			function showword(){
-				document.getElementById("juzi").innerHTML=str.substr(0,i);
-				i++;
-				if(i>len){
-				clearInterval("done");
-				}
-				}
-				var done=setInterval("showword()",400);
-				</script>
 
 </head>
 
 <body>
 <div class="a1">
-	<div id="juzi"></div>
-	<div id="talk">
-        <p><b>·近代作品</b><br>
-          &nbsp;&nbsp;&nbsp;&nbsp;
-张启立的散文集《一路走来》、钟海军的长篇小说《石屋坑》、汪根印的自传《心路追梦》、黄永强的散文集《青漪》等，这些蘸满休宁本土气息的作品，鲜活地诠释着一部部生动立体的“休宁”。 还有陈吉祥、汪道济、俞志成、汪红兴等一大批优秀的本土作家，发表了大量诗歌、散文、小说，他们的文字充分展示了文学创作者严谨、敏锐、深邃与坚韧的精神品质，体现了对当下休宁的深刻思考与感悟。<br>&nbsp;&nbsp;&nbsp;&nbsp;
-作家们心中盛满了对这片土地的热爱，他们用心经营人生，用文字勾勒“心路”，以勤奋之笔精耕细作，亦如涓涓细流，折射着时代的风度、承载着时代的精神，以其雄健的笔力抒写休宁的旋律、休宁的气息、休宁的声音。
+<img src="images/culture.jpg" width="1000px" height="600px">
+<div class="c1">
+<div class="zg">
+	<a href="zhengu.html"><img src="images/zhengu.png"  width="150px"></a></div>
+		<div class="m1">
+            <a href="zhengu.html"><img src="images/moshui.png"  width="200px"></a>
+        </div></div>
 
-		</p>
-	</div>
-		<img src="images/rw1.jpg" width="1000px" height="600px">
-	<div id="top"><img src="images/rw3.png" width="200px;"></div>
+	<div class="c2">
+<div class="cs">
+	<a href="chuanshi.html"><img src="images/chuanshi.png"  width="150px"></a></div>
+		<div class="m2">
+            <a href="chuanshi.html"><img src="images/moshui.png"  width="200px"></a>
+        </div></div>
+	
+	<div class="c3">
+<div class="sj">
+	<a href="shuojin.html"><img src="images/shuojin.png"  width="150px"></a></div>
+		<div class="m3">
+            <a href="shuojin.html"><img src="images/moshui.png"  width="200px"></a>
+        </div></div>
+	
+	<div class="c4">
+<div class="kj">
+<a href="keju.html"><img src="images/keju.png"  width="150px"></a></div>
+		<div class="m4">
+            <a href="keju.html"><img src="images/moshui.png"  width="200px"></a>
+        </div></div>
 <div class="return">
-	<a href="renwen0.html"><img src="images/return.png"  width="60px"></a></div><!--导航栏-->
+<a href="mulu.html"><img src="images/return.png"  width="60px"></a></div>
+<!--导航栏-->
 <div class="pp">
 <div class="dhl">
 <ul>

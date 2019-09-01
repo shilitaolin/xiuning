@@ -41,7 +41,7 @@ $(function() {
                     var time;//下落的持续时间，取随机数
                     var image_daxiao;//花瓣大小取随机数
                     var margin_left;//花瓣所在位置，取随机数
-                    margin_left = randomNum(5, 100);
+                    margin_left = randomNum(5, 95);
                     time = randomNum(par.time_min, par.time_max);
                     console.log(time);
                     image_daxiao = randomNum(par.image_min, par.image_max);

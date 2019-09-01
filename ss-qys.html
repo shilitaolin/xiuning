@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>齐云山</title>
+		<style>
+		* {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  outline: none;
+}
+.a1 {
+  position: relative;
+  width: 1000px;
+  height:620px;
+  margin: 0 auto;
+}
+.tab ul{list-style:none;display:table;}
+.tab ul li{float:left;width:100px;padding-left:8px;margin-right:-1px;cursor:pointer;}
+.tab ul li.active{color:#b5b5b5;font-weight:bold;}/*选中的tab*/
+	.content{position: absolute;top: 20px;left: 170px;width: 700px;height: 400px;}
+.tab .content>div{display:none;}
+.tab .content>div.active{display:block;}
+			#t1{position: absolute;top: 260px;left: 45px; font-family: 楷体;font-size: 31px;width: 20px;
+			color:#fefdfa}
+			#t1 li:hover{color:#C8C8C8;}
+			#j{position: absolute;top: 50px;left: 20px;overflow: scroll;height: 430px;width: 680px;
+				background-color:rgba(255,253,251,0.60);padding: 2em; }
+			#j h1{font-family: 楷体;font-size: 31px;text-shadow:1px 1px 5px #ffffff;line-height: 30px;}
+			#j p{font-family: 楷体;font-size: 19px;text-shadow:1px 1px 5px #ffffff;line-height: 40px;}
+			.a2{position: absolute;top: 60px;left: 20px;width: 687px;height: 470px;background: rgba(255,255,255,0.3);border:solid 5px rgba(0,0,0,0.5);}
+			#g {position: absolute;top: 35px;left: 25px;}
+			.d{animation: dd 5s 1;}@keyframes dd{0%{opacity: 0;}100%{opacity: 1;}}
+			.e{animation: ee 1s 1;}@keyframes ee{0%{opacity: 0;}100%{opacity: 1;}}
+			.a4 {position: absolute;top: 60px;left: 20px;width: 740px;height: 465px;background: rgba(255,255,255,0.3);border:solid 5px rgba(0,0,0,0.5);}
+			#sp{position: absolute;color:#fefdfa; left:35px;top: 70px;}
+			#h {position: absolute;top: 230px;left: 40px;}
+			#juzi{position: absolute;top: 10px;left: 600px;font-family: 楷体;font-size: 20px;font-weight: bold;color: #4D4D4D;}
+			.return {position: absolute;top: 490px;left: 54px;}
+			.return2{position: absolute;top: 490px;left: 54px;opacity: 0;transition: all 0.3s;}
+			 .c:hover .return2 {opacity: 0.4;}
+			#t2{position: absolute;top: 170px;}
+			#tw{position: absolute;font-family: 楷体;font-size: 31px;top: 345px;left: 54px;}
+			a{ text-decoration:none;color: #FEFDFA;}
+			a:hover {color:#C8C8C8;text-decoration:none;}
+		</style>
+<script src="jquery/jquery.min.js"></script>
+<script type="text/javascript">
+$(function ()
+{
+　　$(".tab li").click(function ()
+　　{
+　　　　//获取点击的元素给其添加样式，讲其兄弟元素的样式移除
+　　　　$(this).addClass("active").siblings().removeClass("active");
+　　　　//获取选中元素的下标
+　　　　var index = $(this).index();
+　　　　$(this).parent().siblings().children().eq(index).addClass("active")
+　　　　.siblings().removeClass("active");
+　　});
+});
+
+</script>
+<script type="text/javascript">
+			var str="山与碧云齐，故谓之齐云";
+			var len=str.length;
+			var i=1;
+			function showword(){
+				document.getElementById("juzi").innerHTML=str.substr(0,i);
+				i++;
+				if(i>len){
+				clearInterval("done");
+				}
+				}
+				var done=setInterval("showword()",400);
+				</script>
+	</head>
+	<body><div class="a1">
+		<img src="images/ss-qys.jpg" width="1000px" height="620px">
+		<div class="d"><div id="g"><img src="images/ss-qys.png"></div>
+		<div id="juzi"></div></div>
+		<div id="h"><img src="images/ss-qys1.png"></div>
+		<div id="tw"><a href="ss-qys1.html">图文</a></div>
+		<div class="c">
+		<div class="return"><a href="shanshui.html"><img src="images/return7.png"></a></div>
+		<div class="return2"><a href="shanshui.html"><img src="images/return7.png"></a></div></div>
+		<div class="tab">
+　　<ul id="t1">
+<li class="active">简介</li>
+<li id="t2">视频</li>
+</ul>
+<div class="content">
+　　<div  class="active">
+	  <div class="e">
+　　　　<div id="j"><h1>·齐云山简介</h1><p>&nbsp;&nbsp;&nbsp;&nbsp;齐云山，古称为白岳，集丹霞地貌、摩崖石刻、道教文化、山光水色为一体，因其“一石插天，与云并齐”之故，得名齐云山。<br>&nbsp;&nbsp;&nbsp;&nbsp;
+但实际上齐云山海拔并不高，仅585米，是一个以丹霞地貌为特色的山体，但其一年之中有着260天的云海，遥观其山顶一直与云平齐。而能形成如此奇特的天象景观，恰恰是得益于它山环水曲、藏风聚气的风水环境。它的云海生成之后每每离地面只有七八十米的高度，厚度却达150米。彼时立于此处，所见亭子下方一片苍茫，白云怒涛；远山隐隐，状若仙岛；头顶蓝天，旭日暖阳。<br>&nbsp;&nbsp;&nbsp;&nbsp;
+齐云山区内有三十六奇峰，七十二怪崖，山峰林立，沟壑纵横。乾隆帝曾盛赞齐云山“天下无双胜境，江南第一名山”。齐云山在我国历史上也素有“黄山白岳甲江南”之美誉。齐云山景区于1994年被国务院批准为国家AAAA级风景名胜区、国家森林公园。<br>&nbsp;&nbsp;&nbsp;&nbsp;
+道教文化是齐云山的一大特色，作为“中国道教四大名山” 之一，齐云山道教文化浓郁。相传唐朝乾元年间，龚栖霞道士隐居天门岩下，在此开辟了齐云山道教。南宋时期余道元道士创建了佑圣真武祠，在此供奉真武大帝。相传真武大帝像为百鸟衔泥所塑，十分灵验，致使齐云山常年香火日盛，民间有“玄帝香火，在均州曰武当，在徽州曰齐云”之说。
+
+		</p></div></div>
+　　</div>
+	
+		<div class="e">
+			<div class="a4"></div>
+
+	<div id="sp">
+					<div id="xuexi"><iframe class="video_iframe" style="z-index:1;" src="http://v.qq.com/iframe/player.html?vid=o0372b1hn9n&amp;width=720&amp;height=450&amp;auto=0" allowfullscreen="" frameborder="0" height="520" width="720"></iframe></div>
+	</div>
+</div>
+</div>
+		</div>	</div>	
+	</body>
+	<script src="js/carousel.min.js" type="text/javascript" charset="utf-8"></script>
+	<script type="text/javascript">
+		carousel(
+			$('.demo1'),	//必选， 要轮播模块(id/class/tagname均可)，必须为jQuery元素
+			{
+				type: 'fade',	//可选，默认左右(leftright) - 'leftright' / 'updown' / 'fade' (左右/上下/渐隐渐现)
+				arrowtype: 'move',	//可选，默认一直显示 - 'move' / 'none'	(鼠标移上显示 / 不显示 )
+				autoplay:true,	//可选，默认true - true / false (开启轮播/关闭轮播)
+				time:3000	//可选，默认3000
+			}
+		);
+	</script>
+</html>

@@ -1,37 +1,161 @@
-<!doctype html>
+<!DOCTYPE HTML>
 <html>
 <head>
-<meta charset="utf-8">
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
 <title>游园玩乐</title>
-<style type="text/css">
+<style>
 .a1 {
   position: relative;
   width: 1000px;
-  height:600px;
+  height:620px;
   margin: 0 auto;
   
 }
-.a2{
-	position:absolute;
-	margin-left:-120px;
-	left:550px;	
-	top:410px;
+#top{
+	font-size: 24px;
+	font-family: 楷体;
+	position: absolute;
+	top:5px;
+	left: 20px;
+	height:70px;
+	width: 930px;
+    text-align: center;
+	color: #fff;font-weight: bold;
+}#top1{
+	font-size: 18px;
+	font-family: 楷体;
+	position: absolute;
+	top:40px;
+	left: 20px;
+	height:70px;
+	width: 930px;
+    text-align: center;
+	color: #fff;
 }
-.return{
-		position: absolute;
-		top:460px;
-		left:900px;
-	}
-</style>
+#part1{
+	position: absolute;
+	left: 250px;
+	top: 100px;
+	height:290px;
+	width: 430px;
+	border-radius:25px;
+	background-color:rgba(255,255,255,0);
+    text-align: center;
+	margin:10px;
+}
+#part1 .text{
+	display:none;
+	width:100px;
+}
+#part1 .text img{
+	width:30px;
+}
+#part1 .pic{
+	width:50px;
+	display:block;
+	float:left;
+	margin:10px;
+}
+#part1 .pic p{
+	opacity: 0;
+	text-align:center;
+	font-family: 楷体;
+	margin-top:0;
+	height:20px;
+	width: 50px;
+	line-height:30px;
+	border-radius:8px;
+	color:#0000;
+}
+#part1 .pic img{
+	position: absolute;
+	top: 110px;
+	width:50px;
+	max-height:200px;
+}
+/*part2*/
+#part2{
+	position: absolute;
+	top: 400px;
+	left: 20px;
+	height:180px;
+	width: 930px;
+	margin:10px;
+	border-radius:25px;
+	background-color:rgba(0,0,0,0.3);
+    text-align: center;
+}
+#part2 .pic{
+	width:115px;
+	display:block;
+	float:left;
+	margin:20px;
+}
+#part2 .pic p{
+	font-family: 楷体;
+	text-align:center;
+	margin-top:10px;;
+	height:30px;
+	line-height:30px;
+	background-color:rgba(0,0,0,0.25);
+	border-radius:3px;
+	color:#FFFFFF;
+}
+#part2 .pic img{
+	width:95px;
+}
+	
+	#answer{position: absolute;top:150px ;left: 875px;}
+	#return{position: absolute;top: 275px;left: 875px;}
+	#answer1{position: absolute;top: 5px;left: 150px;display: none;}
+	</style>
+<script src="jquery/jquery-3.2.1.min.js"></script>
+<script type="text/javascript">
+function allowDrop(ev)
+{
+	ev.preventDefault();
+}
 
+function drag(ev)
+{
+	if(ev.target.id.substring(0,1)!="p") ev.dataTransfer.setData("Text","p_"+ev.target.id);
+	else ev.dataTransfer.setData("Text",ev.target.id);
+}
 
+function drop(ev)
+{
+	var data;
+	ev.preventDefault();
+	data=ev.dataTransfer.getData("Text");
+	document.getElementById("part1").appendChild(document.getElementById(data));
+}
+$(document).ready(function(){
+	$("#answer").click(function(){
+		$("#answer1").fadeToggle();
+  	});
+});
+</script>
 </head>
 
-<body>
-<div class="a1">
-<img src="images/game.jpg" width="1000px" height="600px">
-<div class="return">
-<a href="mulu.html"><img src="images/return.png"  width="60px"></a></div>
+<body><div class="a1">
+<img src="images/game.jpg" id="bg_pic" width="1000px" height="620">
+	<div id="top"><p>将属于休宁的事物拖入休宁县地区</p></div>
+	<div id="top1"><p>注：无法拖动的为错误答案</p></div>
+    <div id="contain">
+        <div id="part1" ondrop="drop(event)" ondragover="allowDrop(event)">
+        </div>
+        <div id="part2">
+            <div id="p_qys" class="pic" draggable="true" ondragstart="drag(event)"><img src="images/game1.png" id="qys" draggable="true" ondragstart="drag(event)"><p>齐云山</p></div>
+            <div id="p_yks" class="pic" draggable="true"> <img src="images/game2.png"><p>迎客松</p></div>
+            <div id="p_zy" class="pic" draggable="true" ondragstart="drag(event)"><img src="images/game3.png" id="zy" draggable="true" ondragstart="drag(event)"><p>中国状元博物馆</p></div>
+            <div id="p_cg" class="pic" draggable="true" ondragstart="drag(event)"><img src="images/game4.png" id="cg" draggable="true" ondragstart="drag(event)"><p>五城茶干</p></div>
+            <div id="p_slc" class="pic" draggable="true" ondragstart="drag(event)"><img src="images/game5.png" id="slc" draggable="true" ondragstart="drag(event)"><p>松萝茶</p></div>
+            <div id="p_mtq" class="pic" draggable="true"><img src="images/game6.png"><p>马头墙</p></div>
+        </div>
+    </div>
+<div id="answer"><img src="images/gamea.png"></div>
+<div id="answer1"><img src="images/gamea1.png"></div>
+<div id="return"><a href="mulu.html"><img src="images/gamer.png"></a></div>
 </div>
 </body>
 </html>
