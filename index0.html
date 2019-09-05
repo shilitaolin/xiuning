@@ -1,0 +1,173 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>首页</title>
+<style type="text/css">
+
+/*花瓣*/
+#yinghua{
+    width:50px;
+    height:50px;
+    margin-top:-5%;
+    opacity: 0.8;
+    position: absolute;
+    z-index: 99;
+    /*-webkit-transform:rotate3d(.6,1,.6,45deg);*/
+    /*-moz-transform:rotate3d(.6,1,.6,45deg);*/
+    /*-ms-transform:rotate3d(.6,1,.6,45deg);*/
+    /*-o-transform:rotate3d(.6,1,.6,45deg);*/
+    /*transform:rotate3d(.6,1,.6,45deg);*/
+
+}
+/*花瓣*/
+.a1 {
+  position: relative;
+  width: 1000px;
+  height:620px;
+  margin: 0 auto;
+  
+}
+    .a2 {
+		position: absolute;
+        left:550px;
+		top: 380px;
+		margin-left: -120px;
+    }
+    .m {
+		position: absolute;
+        left:550px;
+		top: 330px;
+		margin-left: -120px;
+        opacity: 0;
+        transition: all 1s;
+	}
+    .content:hover .m {
+        opacity: 0.5;
+    }
+	/*导航栏*/
+#dh
+{
+	position:absolute;
+	left:20px;
+	top:20px;
+	}
+	#dh{
+    transition:All 0.4s ease-in-out;
+}
+#dh:hover{
+    transform:rotate(45deg) scale(1);
+    cursor: cell;
+}
+#dh1:hover,#dh2:hover,#dh3:hover,#dh4:hover,#dh5:hover,#dh6:hover{
+	transform:scale(1.1);
+	}
+.dhl{
+	position:absolute;
+	left:790px;
+	top:25px;
+	height:200px;
+	z-index:999;
+	}
+.dhl ul {
+	list-style-type: none;
+	margin: 0px;
+	padding: 0px;
+}
+.dhl ul li a {
+	text-decoration:none;
+	display: block;
+	text-align: center;
+}
+.dhl ul li ul{
+	display:none;	
+}
+.dhl ul li:hover ul{
+	display:block;
+	position:absolute;
+	left:0px;
+	top:100px;/*选项高度*/
+}.e{animation: ee 1s 1;}@keyframes ee{0%{opacity: 0;}100%{opacity: 1;}}
+#dh1{position:absolute;top:-15px;left:15px;width:73px;height:64px;}	
+#dh2{position:absolute;top:50px;left:15px;width:74px;height:64px;}	
+#dh3{position:absolute;top:116px;left:15px;width:78px;height:60px;}	
+#dh4{position:absolute;top:178px;left:15px;width:78px;height:60px;}	
+#dh5{position:absolute;top:238px;left:10px;width:94px;height:65px;}	
+#dh6{position:absolute;top:288px;left:10px;width:93px;height:75px;}
+/*导航栏*/
+</style>
+<script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+<script src="js/yinghua.js"></script>
+<!--音效-->
+<script type="text/javascript">
+function PlaySound1(soundobj) {
+    var thissound=document.getElementById(soundobj);
+    thissound.play();
+}
+function StopSound1(soundobj) {
+    var thissound=document.getElementById(soundobj);
+    thissound.pause();
+    thissound.currentTime = 0;
+}
+</script>
+<!--音效-->
+	</head>
+	
+<body>
+<div class="a1">
+
+<!--花瓣-->
+<div class="cherry">
+<img id="yinghua" src="images/yinghua.png" alt="" >
+</div>
+<script>
+    $(function(){
+        $('.cherry').Cherry_Blossoms({
+            is_Cherry:true,//是否生成樱花
+            image_min:10,//花瓣最小宽度和高度
+            image_max:50,//花瓣最大宽度和高度
+            time_min:5000,//花瓣最快下坠时间
+            time_max:20000,//花瓣最慢下坠时间
+            interval:800//花瓣生成时间间隔
+        })
+    })
+</script>
+<!--花瓣-->
+<img src="images/page.jpg" width="1000px" height="620px">
+ <div class="content">
+        <div class="a2">
+            <a href="guide.html"><img src="images/into.png"  width="150px"></a>
+        </div>
+        <div class="m">
+            <a href="guide.html"><img src="images/moshui.png"  width="150px"  onmouseover="PlaySound1('shuidi')" 
+onmouseout="StopSound1('shuidi')"><audio controls preload id="shuidi" hidden>
+  <source src="music/shuidi.mp3" type="audio/mp3" />
+  <source src="music/shuidi.ogg" type="audio/ogg" />
+<object data="music/shuidi.ogg ">
+<embed src="music/shuidi.mp3" />
+</object>
+</audio></a>
+        </div>
+    </div>
+<!--导航栏-->
+<div class="pp">
+<div class="dhl">
+<ul>
+<li>
+<a href="#"><img src="images/guide.png" id="dh" width="60px" height="60px" title="导航"></a>
+<ul>
+<li><div class="e"><a href="index.html"><img src="images/dh1.png" id="dh1"></a></div></li>
+<li><div class="e"><a href="shanshui.html"><img src="images/dh2.png" id="dh2"></a></div></li>
+<li><div class="e"><a href="jianzhu.html"><img src="images/dh3.png" id="dh3"></a></div></li>
+<li><div class="e"><a href="renwen.html"><img src="images/dh4.png" id="dh4"></a></div></li>
+<li><div class="e"><a href="game.html"><img src="images/dh6.png" id="dh5"></a></div></li>
+<li><div class="e"><a href="techan.html"><img src="images/dh5.png" id="dh6"></a></div></li>
+</ul>
+</li>
+</ul>
+</div>
+</div>
+<!--导航栏-->
+	</div>
+</body>
+</html>
