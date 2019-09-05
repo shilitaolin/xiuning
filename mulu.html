@@ -166,6 +166,23 @@
 </style>
 <script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
 <script src="js/yinghua.js"></script>
+<script type="text/javascript">
+
+//
+function PlaySound1(soundobj) {
+    var thissound=document.getElementById(soundobj);
+    thissound.play();
+}
+function StopSound1(soundobj) {
+    var thissound=document.getElementById(soundobj);
+    thissound.pause();
+    thissound.currentTime = 0;
+}
+getVideo();
+function getVideo(){
+    document.getElementById("shuidi").volume =0.2;
+}
+</script>
 </head>
 
 <body>

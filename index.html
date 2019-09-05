@@ -98,6 +98,19 @@
 </style>
 <script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
 <script src="js/yinghua.js"></script>
+<!--音效-->
+<script type="text/javascript">
+function PlaySound1(soundobj) {
+    var thissound=document.getElementById(soundobj);
+    thissound.play();
+}
+function StopSound1(soundobj) {
+    var thissound=document.getElementById(soundobj);
+    thissound.pause();
+    thissound.currentTime = 0;
+}
+</script>
+<!--音效-->
 	</head>
 	
 <body>
@@ -120,16 +133,20 @@
     })
 </script>
 <!--花瓣-->
-
-
-
 <img src="images/page.jpg" width="1000px" height="620px">
  <div class="content">
         <div class="a2">
             <a href="guide.html"><img src="images/into.png"  width="150px"></a>
         </div>
         <div class="m">
-            <a href="guide.html"><img src="images/moshui.png"  width="150px"></a>
+            <a href="guide.html"><img src="images/moshui.png"  width="150px"  onmouseover="PlaySound1('shuidi')" 
+onmouseout="StopSound1('shuidi')"><audio controls preload id="shuidi" hidden>
+  <source src="music/shuidi.mp3" type="audio/mp3" />
+  <source src="music/shuidi.ogg" type="audio/ogg" />
+<object data="music/shuidi.ogg ">
+<embed src="music/shuidi.mp3" />
+</object>
+</audio></a>
         </div>
     </div>
 <!--导航栏-->

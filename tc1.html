@@ -13,8 +13,10 @@
 }
 .return{
 		position: absolute;
-		top:470px;
-		left:900px;
+		top:490px;
+		left:20px;
+	}.return img:hover{
+	  transform:scale(1.1);
 	}
 	#a2{
 		position: absolute;
@@ -26,13 +28,67 @@
 	}
 #talk{
 	font-family:楷体;
-	font-size: 23px;
-	line-height: 40px;
+	font-size: 19px;
+	line-height: 30px;
 	position: absolute;
-	width: 800px;
-	top: 320px;
-	left: 100px;
+	width: 390px;
+	height: 450px;
+	top: 60px;
+	left: 460px;
+	border: solid 2px rgba(60,60,60,0.5);
+	background: rgba(255,255,255,0.5);
+	padding: 10px 30px;
 }
+/*导航栏*/
+#dh
+{
+	position:absolute;
+	left:20px;
+	top:20px;
+	}
+	#dh{
+    transition:All 0.4s ease-in-out;
+}
+#dh:hover{
+    transform:rotate(45deg) scale(1);
+    cursor: cell;
+}
+#dh1:hover,#dh2:hover,#dh3:hover,#dh4:hover,#dh5:hover,#dh6:hover{
+	transform:scale(1.1);
+	}
+.dhl{
+	position:absolute;
+	left:900px;
+	top:10px;
+	height:200px;
+	z-index:999;
+	}
+.dhl ul {
+	list-style-type: none;
+	margin: 0px;
+	padding: 0px;
+}
+.dhl ul li a {
+	text-decoration:none;
+	display: block;
+	text-align: center;
+}
+.dhl ul li ul{
+	display:none;	
+}
+.dhl ul li:hover ul{
+	display:block;
+	position:absolute;
+	left:0px;
+	top:100px;/*选项高度*/
+}.e{animation: ee 1s 1;}@keyframes ee{0%{opacity: 0;}100%{opacity: 1;}}
+#dh1{position:absolute;top:-15px;left:15px;width:73px;height:64px;}	
+#dh2{position:absolute;top:50px;left:15px;width:74px;height:64px;}	
+#dh3{position:absolute;top:116px;left:15px;width:78px;height:60px;}	
+#dh4{position:absolute;top:178px;left:15px;width:78px;height:60px;}	
+#dh5{position:absolute;top:238px;left:10px;width:94px;height:65px;}	
+#dh6{position:absolute;top:288px;left:10px;width:93px;height:75px;}
+/*导航栏*/	
 </style>
 
 
@@ -40,22 +96,37 @@
 
 <body>
 <div class="a1">
-	<div id="a2">
+	<!--<div id="a2">
 	<p>中国国家级非物质文化遗产;<br/>
 安徽省休宁县万安镇的汉族传统工艺品;<br/>
-中国国家地理标志产品.
-
-		</p>
-	
-	</div>
+中国国家地理标志产品.</p></div>-->
 	<div id="talk">
         <p>
-          &nbsp;&nbsp;&nbsp;&nbsp;万安罗盘广泛运用于天文、地理、军事、航海和占卜，以及居屋、墓葬选址的重要仪器，是古代汉族劳动人民的四大发明之一指南针的沿续和发展，是在指南针的基础上发展而来的传统民俗工艺品。万安罗盘是中国惟一以汉族传统技艺手工制作的罗盘，因其诞生、生产地为安徽省休宁县万安镇万安老街而得名。
+          &nbsp;&nbsp;&nbsp;&nbsp;磁性指向技术的应用是我国古代的伟大发明，在西汉时期人们已经知道磁石具有指向性,东汉时期即发明了实用的磁性指南器“司南”，约在唐代发明了磁罗盘。罗盘是利用指南针原理制作的一种传统工具，既用于航海辨别方向又用于城市乡村建筑选址定位。
+			<br>&nbsp;&nbsp;&nbsp;&nbsp;休宁县万安镇是现今全国仅存的手工制作罗盘的产地。万安罗盘的传统制作工艺流程严格规范，技艺精湛缜密，所制罗盘、日晷等产品规格全、品种多、精度高，是中国古代民间工艺的杰出代表和遗存标本，是风格独特的徽州文化的非物质文化遗产的重要组成部分。
 		</p>
 	</div>
 	<img src="images/tc1.jpg" width="1000px" height="620px">
 	<div class="return">
-<a href="techan.html"><img src="images/return.png"  width="60px"></a></div>
-	</div>
+<a href="techan.html"><img src="images/tc1.png"  width="130px"></a></div>
+	<!--导航栏-->
+<div class="pp">
+<div class="dhl">
+<ul>
+<li>
+<a href="#"><img src="images/dh.png" id="dh" width="70px" height="70px" title="导航"></a>
+<ul>
+<li><div class="e"><a href="index.html"><img src="images/dh1.png" id="dh1"></a></div></li>
+<li><div class="e"><a href="shanshui.html"><img src="images/dh2.png" id="dh2"></a></div></li>
+<li><div class="e"><a href="jianzhu.html"><img src="images/dh3.png" id="dh3"></a></div></li>
+<li><div class="e"><a href="renwen.html"><img src="images/dh4.png" id="dh4"></a></div></li>
+<li><div class="e"><a href="game.html"><img src="images/dh6.png" id="dh5"></a></div></li>
+<li><div class="e"><a href="techan.html"><img src="images/dh5.png" id="dh6"></a></div></li>
+</ul>
+</li>
+</ul>
+</div>
+</div>
+<!--导航栏--></div>
 </body>
 </html>
